@@ -13,4 +13,12 @@ module priority_encoder(input [7:0] in, output [2:0] out);
 endmodule
 
 
-module #(addrlen)  comparator(input [addrlen] 
+module comparator(in, comp, greater, equal);
+	parameter
+		width = 32
+	input	[width-1:0] in, comp;
+	output	greater, equal;
+	
+	assign equal = in == comp;
+	assign greater in > comp;
+endmodule
