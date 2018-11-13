@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Move that gear up
 // 
 // Create Date: 11/13/2018 01:38:25 PM
 // Design Name: 
@@ -35,37 +35,57 @@ module main( //put tin like the inputs and stuff later
     //something something audio
     
     );
-    
-   memo memory(); //TODO, figure out how this thing works
+   wire [7:0] current_note; // our current not
+   wire       write_enable = sw1 & greater_than;
+   
+   
+   
+   memo memory(current_note, address, data_in, write_enable, clk, reset); 
+
+   
+   wire   mux_out;
+   
+   mux8 mux(data_in, adress1, address2, adress3, adress4, adress5, next_add, mux_ctrl);
+
+   adder theadd(next_add, data_in, 1);
+
+   wire   greater_than, equal_to;
+   
+   
+   comparator camp(greater_than, equal_to, current_note);
+
+   
+   
+
+   
    
     
    always #5 clk = !clk; //do some thing with the clock
 
-
+   
     
 endmodule
 
-            module memo(
- output [7:0] data_out, 
- input [15:0] addr, 
- input [7:0]  data_in,
- input        write_enable,
- input        clk,
- input        reset);
+module memo(
+            output [7:0] data_out, 
+            input [15:0] addr, 
+            input [7:0]  data_in,
+            input        write_enable,
+            input        clk,
+            input        reset);
 
              parameter
              data_words = 'h40000;
 
 
 
-             wire [7:0] data [0:data_words-1];
+             reg [7:0] data [0:data_words-1];
 
              always @ (posedge clk) begin
 
              if (write_enable)
-             data[index] <= data_in;
-             
-          end
+                data[index] <= data_in;
+              end
              
              assign data_out = data[index];
            
