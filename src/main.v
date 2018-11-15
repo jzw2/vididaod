@@ -53,10 +53,6 @@ module main( //put tin like the inputs and stuff later
    
    
    comparator camp(greater_than, equal_to, current_note);
-
-   
-   
-
    
    
     

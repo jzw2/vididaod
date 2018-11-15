@@ -7,9 +7,9 @@ module main_memory(data_out, addr, data_in, write_enable, clk, reset);
 	input	reset;
 
 	parameter begin
-		word_size = 8;
-		len = 65000;
-    len_log_2 = 16;
+		word_size = 8,
+		len = 65000,
+		len_log_2 = 16;
      
 	end
 
