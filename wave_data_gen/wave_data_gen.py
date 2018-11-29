@@ -7,7 +7,7 @@ scale_fac = 65536.0/4 #just choose a nice number, this happens to work quite wel
 
 o = "memory_initialization_radix=16;\nmemory_initialization_vector=\n"
 off = "memory_initialization_radix=16;\nmemory_initialization_vector=\n"
-lengths = "memory_initialization_radix=16;\nmemory_initialization_vector=\n"
+lengths = "memory_initialization_radix=10;\nmemory_initialization_vector=\n"
 col = 0
 num_bytes = 0
 num_bytes_partial = 0
