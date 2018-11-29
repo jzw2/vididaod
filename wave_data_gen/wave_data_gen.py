@@ -7,14 +7,14 @@ scale_fac = 65536.0/4 #just choose a nice number, this happens to work quite wel
 
 o = "memory_initialization_radix=16;\nmemory_initialization_vector=\n"
 off = "memory_initialization_radix=16;\nmemory_initialization_vector=\n"
-lengths = "memory_initialization_radix=10;\nmemory_initialization_vector=\n"
+lengths = "memory_initialization_radix=16;\nmemory_initialization_vector=\n"
 col = 0
 num_bytes = 0
 num_bytes_partial = 0
 for n in range(1, 88, 4): #n is every fourth key 
 
 	note_length = int(round((scale_fac/freq(n))))
-	lengths += str(note_length) + ",\n"
+	lengths += format(note_length, 'x') + ",\n"
 	for x in range(0, note_length): #map to integers scale with scale_fac * 1/freq(n), then round to get closeset end sample
 		num_bytes_partial += 1 #incrememnt the number of bytes for this single wave
 		t = hex(int(math.floor(128*(math.sin(2*math.pi*freq(n)*x/scale_fac)+1))))[2:] + ", "
