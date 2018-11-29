@@ -22,11 +22,15 @@
 `DEFINE LEN = 65000;
 `DEFINE LEN_LOG_2 = 16;
 
-module main(b1, b2, b3, b4, b5, sw1, clk, reset); //put tin like the inputs and stuff later
+module main(note, key, b1, b2, b3, b4, b5, sw1, clk, reset);
 
 	parameter
 		word_size;
 
+	output [word_size-1:0] note; //the note currently being read by the reader
+
+	input [word_size-1:0] key; //the note being played by the user; to be recorded
+	
 	input b1;
 	input b2;
 	input b3;
@@ -37,29 +41,29 @@ module main(b1, b2, b3, b4, b5, sw1, clk, reset); //put tin like the inputs and 
 	input clk;
 	input reset;
 	
-	wire mux_crtl;
-	wire mux_out;
+	wire [2:0] mux_ctrl;
+	wire [LEN_LOG_2-1:0] mux_out;
 		
 	wire greater_than, equal_to;
-	wire PC;
+	wire [`LEN_LOG_2:0] PC;
 	
 	wire [7:0] current_note; // our current not
 	wire write_enable = sw1 & greater_than;
 	
-	wire addr1;
-	wire addr2;
-	wire addr3;
-	wire addr4;
-	wire addr5;	
+	wire [word_size-1:0] addr1;
+	wire [word_size-1:0] addr2;
+	wire [word_size-1:0] addr3;
+	wire [word_size-1:0] addr4;
+	wire [word_size-1:0] addr5;	
 
-	mux_control mux_crtl({{b5}, {b4}, {b3}, {b2}, {b1}}, sw1, clk, reset, mux_crtl);
-	mux8 mux(adress1, addr2, adress3, adress4, adress5, next_add, mux_ctrl, mux_out);
+	mux_control mux_ctrl({{b5}, {b4}, {b3}, {b2}, {b1}}, sw1, clk, reset, mux_ctrl);
+	mux8 #(`LEN_LOG_2) mux(addr1, addr2, addr3, addr4, addr5, next_add, mux_ctrl, mux_out);
 	
-	register #(word_size) PC_Reg(PC, mux_out, clk, 1'b1, reset);
+	register #(`LEN_LOG_2) PC_Reg(PC, mux_out, clk, 1'b1, reset);
 
-	main_memory #(word_size memory(current_note, addr, data_in, write_enable, clk, reset); 
+	main_memory #(word_size, `LEN, `LEN_LOG_2) memory(note, PC, key, write_enable, clk, reset); 
 
-	adder addr_adder(1, mux_out, next_add);
+	adder #(`LEN_LOG_2) addr_adder(1, mux_out, next_add);
 
-	comparator camp(PC, addr5, greater_than, equal_to);
+	comparator writable_comp(PC, addr5, greater_than, equal_to);
 endmodule
