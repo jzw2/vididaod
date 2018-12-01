@@ -1,0 +1,3 @@
+Language File-Name                  IP           Library         File-Path      
+Verilog, lengths_mem_sim_netlist.v, lengths_mem, xil_defaultlib, ../../../../Our
+Verilog, glbl.v,                    *,           xil_defaultlib, glbl.v         
