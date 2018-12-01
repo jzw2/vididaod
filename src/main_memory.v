@@ -1,9 +1,8 @@
 module main_memory(data_out, addr, data_in, write_enable, clk, reset);
-	parameter begin
+	parameter 
 		word_size = 8,
 		len = 65000,
 		len_log_2 = 16;
-	end
 
 	output	[word_size-1:0] data_out; 
 	input	[len_log_2 - 1:0] addr;

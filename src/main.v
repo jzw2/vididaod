@@ -19,13 +19,13 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////// 
 
-`DEFINE LEN = 65000;
-`DEFINE LEN_LOG_2 = 16;
+`define LEN 65000
+`define LEN_LOG_2 16
 
 module main(note, key, b1, b2, b3, b4, b5, sw1, clk, reset);
 
 	parameter
-		word_size;
+		word_size = 69;
 
 	output [word_size-1:0] note; //the note currently being read by the reader
 

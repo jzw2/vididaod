@@ -15,12 +15,13 @@ endmodule
 
 module comparator(in, comp, greater, equal);
 	parameter
-		width = 32
+		width = 32;
+   
 	input	[width-1:0] in, comp;
 	output	greater, equal;
 	
 	assign equal = in == comp;
-	assign greater in > comp;
+	assign greater = in > comp;
 endmodule
 
 module adder(inA, inB, out);
@@ -51,9 +52,9 @@ module mux4(in0, in1, in2, in3, crtl, out);
 	output	[wifth-1:0] out;
 
 	wire [width-1:0] o1, o2;
-	m2_1 mux2(in0, in1, crtl[0], o1);
-	m2_2 mux2(in2, in3, crtl[0], o2);
-	m2_3 mux2(o1, o2, crtl[1], out);
+	mux2 m2_1(in0, in1, crtl[0], o1);
+	mux2 m2_2(in2, in3, crtl[0], o2);
+	mux2 m2_3(o1, o2, crtl[1], out);
 endmodule
 
 
@@ -65,7 +66,7 @@ module mux8(in0, in1, in2, in3, in4, in5, in6, in7, crtl, out);
 	output	[wifth-1:0] out;
 
 	wire [width-1:0] o1, o2;
-	m4_1 mux4(in0, in1, in2, in3, crtl[1:0], o1);
-	m4_2 mux4(in4, in5, in6, in7, crtl[1:0], o2);	
-	m2_3 mux2(o1, o2, crtl[1], out);
+	mux4 m4_1(in0, in1, in2, in3, crtl[1:0], o1);
+	mux4 m4_2(in4, in5, in6, in7, crtl[1:0], o2);	
+	mux2 m2_3(o1, o2, crtl[1], out);
 endmodule
