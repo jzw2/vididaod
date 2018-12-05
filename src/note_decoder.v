@@ -1,20 +1,16 @@
 module sine_note_decoder(input[9:0] note, input clk, output[7:0] amplitude);
-  
-   offset_mem offsetmemory(clk, 1, note[4:0], offsetA, clk, 1, note[4:0] + 1, offsetB);
+ 	
+	wire [2:0] oct;
+	wire [3:0] pos;
+	
+	wire new_clk;
 
-   
-   length_mem offsetmemory(clk, 1, note[4:0], lengthA, clk, 1, note[4:0] + 1, lengthB);
+	octave_decoder oct(note, oct, pos);
+	
+	clock_divider div(clk, oct + 1, new_clk)
+	
+	wave_counter counter_of_the_wave1(offsetA, lengthA, new_clk, 1, note1Addr);
 
-
-   wire [15:0] note1Addr, note2Addr;
-   
-   wave_counter counter_of_the_wave1(offsetA, lengthA, clk, 1, note1Addr);
-   wave_counter counter_of_the_wave2(offsetA, lengthB, clk, 1, note2Addr);
-
-
-   sine_wave_mem memoryWave(note1Addr, note2Addr, , clk, 0, note1, note2);
-
-   linterp interptalotaion_ofememsinewavemomory(note1, note2, amplitude);
-   
-   
+	sine_wave_mem memoryWave(note1Addr, note2Addr, , clk, 0, note1, note2);	
+	
 endmodule
