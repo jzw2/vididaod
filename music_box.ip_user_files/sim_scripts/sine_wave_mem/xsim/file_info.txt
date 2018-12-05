@@ -1,0 +1,3 @@
+Language File-Name              IP             Library              File-Path                                                                  
+VHDL,    dist_mem_gen_v8_0.vhd, sine_wave_mem, dist_mem_gen_v8_0_9, ../../../ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd     
+VHDL,    sine_wave_mem.vhd,     sine_wave_mem, xil_defaultlib,      ../../../../music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd
