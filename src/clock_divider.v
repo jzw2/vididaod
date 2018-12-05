@@ -5,11 +5,11 @@ module clock_divider(input clock, input [15:0] div_amt, output clk);
 	begin
 		if (counter >= div_amt)
 		begin
-			counter <= 1
-			temp_clk <= ~temp_clk
+			counter <= 1;
+			temp_clk <= ~temp_clk;
 		end
 		else
 			cout <= counter + 1;
 	end
-	assign clk = temp_clk
+	assign clk = temp_clk;
 endmodule
