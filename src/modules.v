@@ -28,7 +28,7 @@ module adder(inA, inB, out);
 	parameter
 		width = 32;
 	input	[width-1:0] inA, inB;
-	output	[wifth-1:0] out;
+	output	[width-1:0] out;
 	
 	assign out = inA + inB;
 endmodule
@@ -38,7 +38,7 @@ module mux2(in0, in1, crtl, out);
 		width = 32;
 	input	[width-1:0] in0, in1;
 	input	crtl;
-	output	[wifth-1:0] out;
+	output	[width-1:0] out;
 	
 	assign out = crtl & in1 | ~crtl & in0;
 
@@ -49,7 +49,7 @@ module mux4(in0, in1, in2, in3, crtl, out);
 		width = 32;
 	input	[width-1:0] in0, in1, in2, in3;
 	input	[1:0] crtl;
-	output	[wifth-1:0] out;
+	output	[width-1:0] out;
 
 	wire [width-1:0] o1, o2;
 	mux2 m2_1(in0, in1, crtl[0], o1);
@@ -61,9 +61,9 @@ endmodule
 module mux8(in0, in1, in2, in3, in4, in5, in6, in7, crtl, out);
 	parameter
 		width = 32;
-	input	[width-1:0] in0, in1, in2, in4, in5, in6, in7;
+	input	[width-1:0] in0, in1, in2, in3, in4, in5, in6, in7;
 	input	[2:0] crtl;
-	output	[wifth-1:0] out;
+	output	[width-1:0] out;
 
 	wire [width-1:0] o1, o2;
 	mux4 m4_1(in0, in1, in2, in3, crtl[1:0], o1);

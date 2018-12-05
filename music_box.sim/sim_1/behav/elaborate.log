@@ -1,0 +1,48 @@
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 10 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 16 for port beg_addr [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:19]
+WARNING: [VRFC 10-278] actual bit length 10 differs from formal bit length 32 for port q [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:17]
+WARNING: [VRFC 10-278] actual bit length 10 differs from formal bit length 16 for port inA [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:20]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.register(width=16)
+Compiling module xil_defaultlib.adder(width=10)
+Compiling module xil_defaultlib.adder(width=16)
+Compiling module xil_defaultlib.comparator(width=10)
+Compiling module xil_defaultlib.wave_counter
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav

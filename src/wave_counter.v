@@ -13,7 +13,7 @@ module wave_counter(beg_addr, reset_val, clk, enable, out_addr);
 	wire [reset_size-1:0] offset;
 	wire [reset_size-1:0] next_offset;
 	wire gt, eq;
-	wire reset = ~enable | gt | eq | ~(last_addr == addr);
+	wire reset = ~enable | gt | eq | ~(last_addr == beg_addr);
 	register  offset_reg(offset, next_offset, clk, enable, reset);
 	register #(addr_size) last_addr_reg(last_addr, beg_addr, clk, enable, ~enable);
 	adder #(reset_size) offset_adder(offset, 10'b1, next_offset);
