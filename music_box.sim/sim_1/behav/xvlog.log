@@ -1,0 +1,21 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

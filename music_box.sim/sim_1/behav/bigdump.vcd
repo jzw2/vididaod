@@ -1,0 +1,1786 @@
+$date
+   Wed Dec  5 16:58:53 2018
+$end
+$version
+  13.1
+$end
+$timescale
+  1ps
+$end
+$scope module note_decoder_tb $end
+$var reg 1 ! clk $end
+$var reg 10 " note [9:0] $end
+$var wire 8 # out [7:0] $end
+$scope module main $end
+$var wire 10 $ note [9:0] $end
+$var wire 1 % clk $end
+$var wire 8 & amplitude [7:0] $end
+$var wire 3 ' oct [2:0] $end
+$var wire 4 ( pos [3:0] $end
+$var wire 1 ) new_clk $end
+$var wire 12 * offset [11:0] $end
+$var wire 12 + length [11:0] $end
+$var wire 12 , noteAddr [11:0] $end
+$scope module oct_dec $end
+$var wire 7 - note [6:0] $end
+$var wire 3 . octave [2:0] $end
+$var wire 4 / octave_pos [3:0] $end
+$upscope $end
+$scope module div $end
+$var wire 1 0 clk_in $end
+$var wire 16 1 div_amt [15:0] $end
+$var wire 1 2 clk_out $end
+$var reg 32 3 counter [31:0] $end
+$var reg 1 4 temp_clk $end
+$upscope $end
+$scope module lengths $end
+$var wire 1 5 clka $end
+$var wire 1 6 ena $end
+$var wire 4 7 addra [3:0] $end
+$var wire 12 8 douta [11:0] $end
+$scope module U0 $end
+$var wire 1 9 clka $end
+$var wire 1 : rsta $end
+$var wire 1 ; ena $end
+$var wire 1 < regcea $end
+$var wire 1 = wea [0:0] $end
+$var wire 4 > addra [3:0] $end
+$var wire 12 ? dina [11:0] $end
+$var wire 12 @ douta [11:0] $end
+$var wire 1 A clkb $end
+$var wire 1 B rstb $end
+$var wire 1 C enb $end
+$var wire 1 D regceb $end
+$var wire 1 E web [0:0] $end
+$var wire 4 F addrb [3:0] $end
+$var wire 12 G dinb [11:0] $end
+$var wire 12 H doutb [11:0] $end
+$var wire 1 I injectsbiterr $end
+$var wire 1 J injectdbiterr $end
+$var wire 1 K sbiterr $end
+$var wire 1 L dbiterr $end
+$var wire 4 M rdaddrecc [3:0] $end
+$var wire 1 N eccpipece $end
+$var wire 1 O sleep $end
+$var wire 1 P deepsleep $end
+$var wire 1 Q shutdown $end
+$var wire 1 R rsta_busy $end
+$var wire 1 S rstb_busy $end
+$var wire 1 T s_aclk $end
+$var wire 1 U s_aresetn $end
+$var wire 4 V s_axi_awid [3:0] $end
+$var wire 32 W s_axi_awaddr [31:0] $end
+$var wire 8 X s_axi_awlen [7:0] $end
+$var wire 3 Y s_axi_awsize [2:0] $end
+$var wire 2 Z s_axi_awburst [1:0] $end
+$var wire 1 [ s_axi_awvalid $end
+$var wire 1 \ s_axi_awready $end
+$var wire 12 ] s_axi_wdata [11:0] $end
+$var wire 1 ^ s_axi_wstrb [0:0] $end
+$var wire 1 _ s_axi_wlast $end
+$var wire 1 ` s_axi_wvalid $end
+$var wire 1 a s_axi_wready $end
+$var wire 4 b s_axi_bid [3:0] $end
+$var wire 2 c s_axi_bresp [1:0] $end
+$var wire 1 d s_axi_bvalid $end
+$var wire 1 e s_axi_bready $end
+$var wire 4 f s_axi_arid [3:0] $end
+$var wire 32 g s_axi_araddr [31:0] $end
+$var wire 8 h s_axi_arlen [7:0] $end
+$var wire 3 i s_axi_arsize [2:0] $end
+$var wire 2 j s_axi_arburst [1:0] $end
+$var wire 1 k s_axi_arvalid $end
+$var wire 1 l s_axi_arready $end
+$var wire 4 m s_axi_rid [3:0] $end
+$var wire 12 n s_axi_rdata [11:0] $end
+$var wire 2 o s_axi_rresp [1:0] $end
+$var wire 1 p s_axi_rlast $end
+$var wire 1 q s_axi_rvalid $end
+$var wire 1 r s_axi_rready $end
+$var wire 1 s s_axi_injectsbiterr $end
+$var wire 1 t s_axi_injectdbiterr $end
+$var wire 1 u s_axi_sbiterr $end
+$var wire 1 v s_axi_dbiterr $end
+$var wire 4 w s_axi_rdaddrecc [3:0] $end
+$var wire 1 x rsta_in $end
+$var wire 1 y ena_in $end
+$var wire 1 z regcea_in $end
+$var wire 1 { wea_in [0:0] $end
+$var wire 4 | addra_in [3:0] $end
+$var wire 12 } dina_in [11:0] $end
+$var wire 1 ~ injectsbiterr_in $end
+$var wire 1 !! injectdbiterr_in $end
+$var wire 4 "! s_axi_awaddr_out_c [3:0] $end
+$var wire 4 #! s_axi_araddr_out_c [3:0] $end
+$var wire 1 $! s_axi_wr_en_c $end
+$var wire 1 %! s_axi_rd_en_c $end
+$var wire 1 &! s_aresetn_a_c $end
+$var wire 5 '! RSTA_SHFT_REG [4:0] $end
+$var wire 1 (! POR_A $end
+$var wire 5 )! RSTB_SHFT_REG [4:0] $end
+$var wire 1 *! POR_B $end
+$var wire 1 +! ENA_dly $end
+$var wire 1 ,! ENA_dly_D $end
+$var wire 1 -! ENB_dly $end
+$var wire 1 .! ENB_dly_D $end
+$var wire 1 /! RSTA_I_SAFE $end
+$var wire 1 0! RSTB_I_SAFE $end
+$var wire 1 1! ENA_I_SAFE $end
+$var wire 1 2! ENB_I_SAFE $end
+$var wire 1 3! ram_rstram_a_busy $end
+$var wire 1 4! ram_rstreg_a_busy $end
+$var wire 1 5! ram_rstram_b_busy $end
+$var wire 1 6! ram_rstreg_b_busy $end
+$var wire 1 7! ENA_dly_reg $end
+$var wire 1 8! ENB_dly_reg $end
+$var wire 1 9! ENA_dly_reg_D $end
+$var wire 1 :! ENB_dly_reg_D $end
+$scope begin no_input_stage $end
+$upscope $end
+$scope begin no_safety_ckt_gen $end
+$upscope $end
+$scope begin native_mem_module $end
+$scope module mem_module $end
+$var wire 1 ;! CLKA $end
+$var wire 1 <! RSTA $end
+$var wire 1 =! ENA $end
+$var wire 1 >! REGCEA $end
+$var wire 1 ?! WEA [0:0] $end
+$var wire 4 @! ADDRA [3:0] $end
+$var wire 12 A! DINA [11:0] $end
+$var wire 12 B! DOUTA [11:0] $end
+$var wire 1 C! CLKB $end
+$var wire 1 D! RSTB $end
+$var wire 1 E! ENB $end
+$var wire 1 F! REGCEB $end
+$var wire 1 G! WEB [0:0] $end
+$var wire 4 H! ADDRB [3:0] $end
+$var wire 12 I! DINB [11:0] $end
+$var wire 12 J! DOUTB [11:0] $end
+$var wire 1 K! INJECTSBITERR $end
+$var wire 1 L! INJECTDBITERR $end
+$var wire 1 M! SBITERR $end
+$var wire 1 N! DBITERR $end
+$var wire 1 O! ECCPIPECE $end
+$var wire 1 P! SLEEP $end
+$var wire 4 Q! RDADDRECC [3:0] $end
+$var wire 18 R! doublebit_error_i [17:0] $end
+$var wire 12 S! current_contents_i [11:0] $end
+$var wire 12 T! memory_out_a [11:0] $end
+$var wire 12 U! memory_out_b [11:0] $end
+$var wire 1 V! sbiterr_in $end
+$var wire 1 W! sbiterr_sdp $end
+$var wire 1 X! dbiterr_in $end
+$var wire 1 Y! dbiterr_sdp $end
+$var wire 4 Z! rdaddrecc_in [3:0] $end
+$var wire 4 [! rdaddrecc_sdp [3:0] $end
+$var wire 12 \! doutb_i [11:0] $end
+$var wire 4 ]! rdaddrecc_i [3:0] $end
+$var wire 1 ^! sbiterr_i $end
+$var wire 1 _! dbiterr_i $end
+$var wire 1 `! ena_i $end
+$var wire 1 a! enb_i $end
+$var wire 1 b! reseta_i $end
+$var wire 1 c! resetb_i $end
+$var wire 1 d! wea_i [0:0] $end
+$var wire 1 e! web_i [0:0] $end
+$var wire 1 f! rea_i $end
+$var wire 1 g! reb_i $end
+$var wire 1 h! rsta_outp_stage $end
+$var wire 1 i! rstb_outp_stage $end
+$scope module reg_a $end
+$var wire 1 j! CLK $end
+$var wire 1 k! RST $end
+$var wire 1 l! EN $end
+$var wire 1 m! REGCE $end
+$var wire 12 n! DIN_I [11:0] $end
+$var wire 12 o! DOUT [11:0] $end
+$var wire 1 p! SBITERR_IN_I $end
+$var wire 1 q! DBITERR_IN_I $end
+$var wire 1 r! SBITERR $end
+$var wire 1 s! DBITERR $end
+$var wire 4 t! RDADDRECC_IN_I [3:0] $end
+$var wire 1 u! eccpipece $end
+$var wire 4 v! RDADDRECC [3:0] $end
+$var wire 1 w! en_i $end
+$var wire 1 x! regce_i $end
+$var wire 1 y! rst_i $end
+$var wire 12 z! dout_i [11:0] $end
+$var wire 1 {! sbiterr_i $end
+$var wire 1 |! dbiterr_i $end
+$var wire 4 }! rdaddrecc_i [3:0] $end
+$var wire 12 ~! DIN [11:0] $end
+$var wire 4 !" RDADDRECC_IN [3:0] $end
+$var wire 1 "" SBITERR_IN $end
+$var wire 1 #" DBITERR_IN $end
+$scope begin no_ecc_pipe_reg $end
+$upscope $end
+$scope begin one_stage_norm $end
+$upscope $end
+$upscope $end
+$scope module reg_b $end
+$var wire 1 $" CLK $end
+$var wire 1 %" RST $end
+$var wire 1 &" EN $end
+$var wire 1 '" REGCE $end
+$var wire 12 (" DIN_I [11:0] $end
+$var wire 12 )" DOUT [11:0] $end
+$var wire 1 *" SBITERR_IN_I $end
+$var wire 1 +" DBITERR_IN_I $end
+$var wire 1 ," SBITERR $end
+$var wire 1 -" DBITERR $end
+$var wire 4 ." RDADDRECC_IN_I [3:0] $end
+$var wire 1 /" eccpipece $end
+$var wire 4 0" RDADDRECC [3:0] $end
+$var wire 1 1" en_i $end
+$var wire 1 2" regce_i $end
+$var wire 1 3" rst_i $end
+$var wire 12 4" dout_i [11:0] $end
+$var wire 1 5" sbiterr_i $end
+$var wire 1 6" dbiterr_i $end
+$var wire 4 7" rdaddrecc_i [3:0] $end
+$var wire 12 8" DIN [11:0] $end
+$var wire 4 9" RDADDRECC_IN [3:0] $end
+$var wire 1 :" SBITERR_IN $end
+$var wire 1 ;" DBITERR_IN $end
+$scope begin zero_stages $end
+$upscope $end
+$scope begin no_ecc_pipe_reg $end
+$upscope $end
+$upscope $end
+$scope module output_reg_stage $end
+$var wire 1 <" CLK $end
+$var wire 12 =" DIN [11:0] $end
+$var wire 12 >" DOUT [11:0] $end
+$var wire 1 ?" SBITERR_IN $end
+$var wire 1 @" DBITERR_IN $end
+$var wire 1 A" SBITERR $end
+$var wire 1 B" DBITERR $end
+$var wire 4 C" RDADDRECC_IN [3:0] $end
+$var wire 4 D" RDADDRECC [3:0] $end
+$var wire 12 E" dout_i [11:0] $end
+$var wire 1 F" sbiterr_i $end
+$var wire 1 G" dbiterr_i $end
+$var wire 4 H" rdaddrecc_i [3:0] $end
+$scope begin no_output_stage $end
+$upscope $end
+$upscope $end
+$scope begin async_coll $end
+$var wire 4 I" addra_delay [3:0] $end
+$var wire 1 J" wea_delay [0:0] $end
+$var wire 1 K" ena_delay $end
+$var wire 4 L" addrb_delay [3:0] $end
+$var wire 1 M" web_delay [0:0] $end
+$var wire 1 N" enb_delay $end
+$scope task line__4203 $end
+$upscope $end
+$scope task line__4265 $end
+$upscope $end
+$upscope $end
+$scope task line__3418 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module offsets $end
+$var wire 1 O" clka $end
+$var wire 1 P" ena $end
+$var wire 4 Q" addra [3:0] $end
+$var wire 12 R" douta [11:0] $end
+$scope module U0 $end
+$var wire 1 S" clka $end
+$var wire 1 T" rsta $end
+$var wire 1 U" ena $end
+$var wire 1 V" regcea $end
+$var wire 1 W" wea [0:0] $end
+$var wire 4 X" addra [3:0] $end
+$var wire 12 Y" dina [11:0] $end
+$var wire 12 Z" douta [11:0] $end
+$var wire 1 [" clkb $end
+$var wire 1 \" rstb $end
+$var wire 1 ]" enb $end
+$var wire 1 ^" regceb $end
+$var wire 1 _" web [0:0] $end
+$var wire 4 `" addrb [3:0] $end
+$var wire 12 a" dinb [11:0] $end
+$var wire 12 b" doutb [11:0] $end
+$var wire 1 c" injectsbiterr $end
+$var wire 1 d" injectdbiterr $end
+$var wire 1 e" sbiterr $end
+$var wire 1 f" dbiterr $end
+$var wire 4 g" rdaddrecc [3:0] $end
+$var wire 1 h" eccpipece $end
+$var wire 1 i" sleep $end
+$var wire 1 j" deepsleep $end
+$var wire 1 k" shutdown $end
+$var wire 1 l" rsta_busy $end
+$var wire 1 m" rstb_busy $end
+$var wire 1 n" s_aclk $end
+$var wire 1 o" s_aresetn $end
+$var wire 4 p" s_axi_awid [3:0] $end
+$var wire 32 q" s_axi_awaddr [31:0] $end
+$var wire 8 r" s_axi_awlen [7:0] $end
+$var wire 3 s" s_axi_awsize [2:0] $end
+$var wire 2 t" s_axi_awburst [1:0] $end
+$var wire 1 u" s_axi_awvalid $end
+$var wire 1 v" s_axi_awready $end
+$var wire 12 w" s_axi_wdata [11:0] $end
+$var wire 1 x" s_axi_wstrb [0:0] $end
+$var wire 1 y" s_axi_wlast $end
+$var wire 1 z" s_axi_wvalid $end
+$var wire 1 {" s_axi_wready $end
+$var wire 4 |" s_axi_bid [3:0] $end
+$var wire 2 }" s_axi_bresp [1:0] $end
+$var wire 1 ~" s_axi_bvalid $end
+$var wire 1 !# s_axi_bready $end
+$var wire 4 "# s_axi_arid [3:0] $end
+$var wire 32 ## s_axi_araddr [31:0] $end
+$var wire 8 $# s_axi_arlen [7:0] $end
+$var wire 3 %# s_axi_arsize [2:0] $end
+$var wire 2 &# s_axi_arburst [1:0] $end
+$var wire 1 '# s_axi_arvalid $end
+$var wire 1 (# s_axi_arready $end
+$var wire 4 )# s_axi_rid [3:0] $end
+$var wire 12 *# s_axi_rdata [11:0] $end
+$var wire 2 +# s_axi_rresp [1:0] $end
+$var wire 1 ,# s_axi_rlast $end
+$var wire 1 -# s_axi_rvalid $end
+$var wire 1 .# s_axi_rready $end
+$var wire 1 /# s_axi_injectsbiterr $end
+$var wire 1 0# s_axi_injectdbiterr $end
+$var wire 1 1# s_axi_sbiterr $end
+$var wire 1 2# s_axi_dbiterr $end
+$var wire 4 3# s_axi_rdaddrecc [3:0] $end
+$var wire 1 4# rsta_in $end
+$var wire 1 5# ena_in $end
+$var wire 1 6# regcea_in $end
+$var wire 1 7# wea_in [0:0] $end
+$var wire 4 8# addra_in [3:0] $end
+$var wire 12 9# dina_in [11:0] $end
+$var wire 1 :# injectsbiterr_in $end
+$var wire 1 ;# injectdbiterr_in $end
+$var wire 4 <# s_axi_awaddr_out_c [3:0] $end
+$var wire 4 =# s_axi_araddr_out_c [3:0] $end
+$var wire 1 ># s_axi_wr_en_c $end
+$var wire 1 ?# s_axi_rd_en_c $end
+$var wire 1 @# s_aresetn_a_c $end
+$var wire 5 A# RSTA_SHFT_REG [4:0] $end
+$var wire 1 B# POR_A $end
+$var wire 5 C# RSTB_SHFT_REG [4:0] $end
+$var wire 1 D# POR_B $end
+$var wire 1 E# ENA_dly $end
+$var wire 1 F# ENA_dly_D $end
+$var wire 1 G# ENB_dly $end
+$var wire 1 H# ENB_dly_D $end
+$var wire 1 I# RSTA_I_SAFE $end
+$var wire 1 J# RSTB_I_SAFE $end
+$var wire 1 K# ENA_I_SAFE $end
+$var wire 1 L# ENB_I_SAFE $end
+$var wire 1 M# ram_rstram_a_busy $end
+$var wire 1 N# ram_rstreg_a_busy $end
+$var wire 1 O# ram_rstram_b_busy $end
+$var wire 1 P# ram_rstreg_b_busy $end
+$var wire 1 Q# ENA_dly_reg $end
+$var wire 1 R# ENB_dly_reg $end
+$var wire 1 S# ENA_dly_reg_D $end
+$var wire 1 T# ENB_dly_reg_D $end
+$scope begin no_input_stage $end
+$upscope $end
+$scope begin no_safety_ckt_gen $end
+$upscope $end
+$scope begin native_mem_module $end
+$scope module mem_module $end
+$var wire 1 U# CLKA $end
+$var wire 1 V# RSTA $end
+$var wire 1 W# ENA $end
+$var wire 1 X# REGCEA $end
+$var wire 1 Y# WEA [0:0] $end
+$var wire 4 Z# ADDRA [3:0] $end
+$var wire 12 [# DINA [11:0] $end
+$var wire 12 \# DOUTA [11:0] $end
+$var wire 1 ]# CLKB $end
+$var wire 1 ^# RSTB $end
+$var wire 1 _# ENB $end
+$var wire 1 `# REGCEB $end
+$var wire 1 a# WEB [0:0] $end
+$var wire 4 b# ADDRB [3:0] $end
+$var wire 12 c# DINB [11:0] $end
+$var wire 12 d# DOUTB [11:0] $end
+$var wire 1 e# INJECTSBITERR $end
+$var wire 1 f# INJECTDBITERR $end
+$var wire 1 g# SBITERR $end
+$var wire 1 h# DBITERR $end
+$var wire 1 i# ECCPIPECE $end
+$var wire 1 j# SLEEP $end
+$var wire 4 k# RDADDRECC [3:0] $end
+$var wire 18 l# doublebit_error_i [17:0] $end
+$var wire 12 m# current_contents_i [11:0] $end
+$var wire 12 n# memory_out_a [11:0] $end
+$var wire 12 o# memory_out_b [11:0] $end
+$var wire 1 p# sbiterr_in $end
+$var wire 1 q# sbiterr_sdp $end
+$var wire 1 r# dbiterr_in $end
+$var wire 1 s# dbiterr_sdp $end
+$var wire 4 t# rdaddrecc_in [3:0] $end
+$var wire 4 u# rdaddrecc_sdp [3:0] $end
+$var wire 12 v# doutb_i [11:0] $end
+$var wire 4 w# rdaddrecc_i [3:0] $end
+$var wire 1 x# sbiterr_i $end
+$var wire 1 y# dbiterr_i $end
+$var wire 1 z# ena_i $end
+$var wire 1 {# enb_i $end
+$var wire 1 |# reseta_i $end
+$var wire 1 }# resetb_i $end
+$var wire 1 ~# wea_i [0:0] $end
+$var wire 1 !$ web_i [0:0] $end
+$var wire 1 "$ rea_i $end
+$var wire 1 #$ reb_i $end
+$var wire 1 $$ rsta_outp_stage $end
+$var wire 1 %$ rstb_outp_stage $end
+$scope module reg_a $end
+$var wire 1 &$ CLK $end
+$var wire 1 '$ RST $end
+$var wire 1 ($ EN $end
+$var wire 1 )$ REGCE $end
+$var wire 12 *$ DIN_I [11:0] $end
+$var wire 12 +$ DOUT [11:0] $end
+$var wire 1 ,$ SBITERR_IN_I $end
+$var wire 1 -$ DBITERR_IN_I $end
+$var wire 1 .$ SBITERR $end
+$var wire 1 /$ DBITERR $end
+$var wire 4 0$ RDADDRECC_IN_I [3:0] $end
+$var wire 1 1$ eccpipece $end
+$var wire 4 2$ RDADDRECC [3:0] $end
+$var wire 1 3$ en_i $end
+$var wire 1 4$ regce_i $end
+$var wire 1 5$ rst_i $end
+$var wire 12 6$ dout_i [11:0] $end
+$var wire 1 7$ sbiterr_i $end
+$var wire 1 8$ dbiterr_i $end
+$var wire 4 9$ rdaddrecc_i [3:0] $end
+$var wire 12 :$ DIN [11:0] $end
+$var wire 4 ;$ RDADDRECC_IN [3:0] $end
+$var wire 1 <$ SBITERR_IN $end
+$var wire 1 =$ DBITERR_IN $end
+$scope begin no_ecc_pipe_reg $end
+$upscope $end
+$scope begin one_stage_norm $end
+$upscope $end
+$upscope $end
+$scope module reg_b $end
+$var wire 1 >$ CLK $end
+$var wire 1 ?$ RST $end
+$var wire 1 @$ EN $end
+$var wire 1 A$ REGCE $end
+$var wire 12 B$ DIN_I [11:0] $end
+$var wire 12 C$ DOUT [11:0] $end
+$var wire 1 D$ SBITERR_IN_I $end
+$var wire 1 E$ DBITERR_IN_I $end
+$var wire 1 F$ SBITERR $end
+$var wire 1 G$ DBITERR $end
+$var wire 4 H$ RDADDRECC_IN_I [3:0] $end
+$var wire 1 I$ eccpipece $end
+$var wire 4 J$ RDADDRECC [3:0] $end
+$var wire 1 K$ en_i $end
+$var wire 1 L$ regce_i $end
+$var wire 1 M$ rst_i $end
+$var wire 12 N$ dout_i [11:0] $end
+$var wire 1 O$ sbiterr_i $end
+$var wire 1 P$ dbiterr_i $end
+$var wire 4 Q$ rdaddrecc_i [3:0] $end
+$var wire 12 R$ DIN [11:0] $end
+$var wire 4 S$ RDADDRECC_IN [3:0] $end
+$var wire 1 T$ SBITERR_IN $end
+$var wire 1 U$ DBITERR_IN $end
+$scope begin zero_stages $end
+$upscope $end
+$scope begin no_ecc_pipe_reg $end
+$upscope $end
+$upscope $end
+$scope module output_reg_stage $end
+$var wire 1 V$ CLK $end
+$var wire 12 W$ DIN [11:0] $end
+$var wire 12 X$ DOUT [11:0] $end
+$var wire 1 Y$ SBITERR_IN $end
+$var wire 1 Z$ DBITERR_IN $end
+$var wire 1 [$ SBITERR $end
+$var wire 1 \$ DBITERR $end
+$var wire 4 ]$ RDADDRECC_IN [3:0] $end
+$var wire 4 ^$ RDADDRECC [3:0] $end
+$var wire 12 _$ dout_i [11:0] $end
+$var wire 1 `$ sbiterr_i $end
+$var wire 1 a$ dbiterr_i $end
+$var wire 4 b$ rdaddrecc_i [3:0] $end
+$scope begin no_output_stage $end
+$upscope $end
+$upscope $end
+$scope begin async_coll $end
+$var wire 4 c$ addra_delay [3:0] $end
+$var wire 1 d$ wea_delay [0:0] $end
+$var wire 1 e$ ena_delay $end
+$var wire 4 f$ addrb_delay [3:0] $end
+$var wire 1 g$ web_delay [0:0] $end
+$var wire 1 h$ enb_delay $end
+$scope task line__4203 $end
+$upscope $end
+$scope task line__4265 $end
+$upscope $end
+$upscope $end
+$scope task line__3418 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module wc $end
+$var wire 16 i$ beg_addr [15:0] $end
+$var wire 10 j$ reset_val [9:0] $end
+$var wire 1 k$ clk $end
+$var wire 1 l$ enable $end
+$var wire 16 m$ out_addr [15:0] $end
+$var wire 16 n$ last_addr [15:0] $end
+$var wire 10 o$ offset [9:0] $end
+$var wire 10 p$ next_offset [9:0] $end
+$var wire 1 q$ gt $end
+$var wire 1 r$ eq $end
+$var wire 1 s$ reset $end
+$var parameter 32 t$ addr_size [31:0] $end
+$var parameter 32 u$ reset_size [31:0] $end
+$scope module offset_reg $end
+$var reg 32 v$ q [31:0] $end
+$var wire 32 w$ d [31:0] $end
+$var wire 1 x$ clk $end
+$var wire 1 y$ enable $end
+$var wire 1 z$ reset $end
+$var parameter 32 {$ width [31:0] $end
+$var parameter 32 |$ reset_value [31:0] $end
+$upscope $end
+$scope module last_addr_reg $end
+$var reg 16 }$ q [15:0] $end
+$var wire 16 ~$ d [15:0] $end
+$var wire 1 !% clk $end
+$var wire 1 "% enable $end
+$var wire 1 #% reset $end
+$var parameter 32 $% width [31:0] $end
+$var parameter 32 %% reset_value [31:0] $end
+$upscope $end
+$scope module offset_adder $end
+$var wire 10 &% inA [9:0] $end
+$var wire 10 '% inB [9:0] $end
+$var wire 10 (% out [9:0] $end
+$var parameter 32 )% width [31:0] $end
+$upscope $end
+$scope module addr_adder $end
+$var wire 16 *% inA [15:0] $end
+$var wire 16 +% inB [15:0] $end
+$var wire 16 ,% out [15:0] $end
+$var parameter 32 -% width [31:0] $end
+$upscope $end
+$scope module comp $end
+$var wire 10 .% in [9:0] $end
+$var wire 10 /% comp [9:0] $end
+$var wire 1 0% greater $end
+$var wire 1 1% equal $end
+$var parameter 32 2% width [31:0] $end
+$upscope $end
+$upscope $end
+$scope module memoryWave $end
+$var wire 12 3% a [11:0] $end
+$var wire 8 4% spo [7:0] $end
+$scope module U0 $end
+$var wire 12 5% a [11:0] $end
+$var wire 8 6% d [7:0] $end
+$var wire 12 7% dpra [11:0] $end
+$var wire 1 8% clk $end
+$var wire 1 9% we $end
+$var wire 1 :% i_ce $end
+$var wire 1 ;% qspo_ce $end
+$var wire 1 <% qdpo_ce $end
+$var wire 1 =% qdpo_clk $end
+$var wire 1 >% qspo_rst $end
+$var wire 1 ?% qdpo_rst $end
+$var wire 1 @% qspo_srst $end
+$var wire 1 A% qdpo_srst $end
+$var wire 8 B% spo [7:0] $end
+$var wire 8 C% dpo [7:0] $end
+$var wire 8 D% qspo [7:0] $end
+$var wire 8 E% qdpo [7:0] $end
+$var wire 12 F% a_int [11:0] $end
+$var wire 12 G% a_reg [11:0] $end
+$var wire 12 H% a_over [11:0] $end
+$var wire 12 I% dpra_int [11:0] $end
+$var wire 12 J% dpra_reg [11:0] $end
+$var wire 12 K% dpra_over [11:0] $end
+$var wire 8 L% d_int [7:0] $end
+$var wire 8 M% d_reg [7:0] $end
+$var wire 1 N% we_int $end
+$var wire 1 O% we_reg $end
+$var wire 1 P% qspo_ce_int $end
+$var wire 1 Q% qspo_ce_reg $end
+$var wire 1 R% qdpo_ce_int $end
+$var wire 1 S% qdpo_ce_reg $end
+$var wire 8 T% spo_int [7:0] $end
+$var wire 8 U% qspo_pipe [7:0] $end
+$var wire 8 V% qspo_int [7:0] $end
+$var wire 8 W% dpo_int [7:0] $end
+$var wire 8 X% qdpo_pipe [7:0] $end
+$var wire 8 Y% qdpo_int [7:0] $end
+$var wire 8 Z% data_sp [7:0] $end
+$var wire 8 [% data_dp [7:0] $end
+$var wire 8 \% data_sp_over [7:0] $end
+$var wire 8 ]% data_dp_over [7:0] $end
+$var wire 1 ^% a_is_over $end
+$var wire 1 _% dpra_is_over $end
+$scope begin g_no_optional_input_regs $end
+$upscope $end
+$scope begin g_no_optional_dual_port_regs $end
+$upscope $end
+$scope begin \g_dpra_over(0)\ $end
+$upscope $end
+$scope begin \g_dpra_over(1)\ $end
+$upscope $end
+$scope begin \g_dpra_over(2)\ $end
+$upscope $end
+$scope begin \g_dpra_over(3)\ $end
+$upscope $end
+$scope begin \g_dpra_over(4)\ $end
+$upscope $end
+$scope begin \g_dpra_over(5)\ $end
+$upscope $end
+$scope begin \g_dpra_over(6)\ $end
+$upscope $end
+$scope begin \g_dpra_over(7)\ $end
+$upscope $end
+$scope begin \g_dpra_over(8)\ $end
+$upscope $end
+$scope begin \g_dpra_over(9)\ $end
+$upscope $end
+$scope begin \g_dpra_over(10)\ $end
+$upscope $end
+$scope begin \g_dpra_over(11)\ $end
+$upscope $end
+$scope begin g_has_spo $end
+$upscope $end
+$scope begin g_not_dpram $end
+$upscope $end
+$scope begin g_has_no_dpo $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0!!
+b0 !"
+0!#
+0!$
+0!%
+b1 "
+b0 "!
+0""
+b0 "#
+1"$
+1"%
+b10000000 #
+b0 #!
+0#"
+b0 ##
+0#$
+0#%
+b1 $
+0$!
+0$"
+b0 $#
+0$$
+b10000 $%
+0%
+0%!
+0%"
+b0 %#
+0%$
+b0 %%
+b10000000 &
+0&!
+0&"
+b0 &#
+0&$
+bx &%
+b0 '
+b0 '!
+0'"
+0'#
+0'$
+b1 '%
+b0 (
+0(!
+b0 ("
+x(#
+1($
+bx (%
+0)
+b0 )!
+b0 )"
+b0 )#
+0)$
+b1010 )%
+b0 *
+0*!
+0*"
+bx *#
+b0 *$
+bzxxxxxxxxxx *%
+b0 +
+0+!
+0+"
+bx +#
+b0 +$
+bz000000000000 +%
+bx ,
+0,!
+0,"
+x,#
+0,$
+bx ,%
+b1 -
+0-!
+0-"
+x-#
+0-$
+b10000 -%
+b0 .
+0.!
+b0 ."
+0.#
+0.$
+bx .%
+b0 /
+0/!
+0/"
+0/#
+0/$
+b0 /%
+00
+00!
+b0 0"
+00#
+b0 0$
+x0%
+b1 1
+11!
+11"
+01#
+01$
+x1%
+02
+02!
+12"
+02#
+b0 2$
+b1010 2%
+b1 3
+03!
+03"
+b0 3#
+13$
+bx 3%
+04
+04!
+b0 4"
+04#
+14$
+b10000000 4%
+05
+05!
+05"
+15#
+05$
+bx 5%
+16
+06!
+06"
+06#
+b0 6$
+b0 6%
+b0 7
+07!
+b0 7"
+07#
+07$
+b0 7%
+b0 8
+08!
+b0 8"
+b0 8#
+08$
+08%
+09
+09!
+b0 9"
+b0 9#
+b0 9$
+09%
+0:
+0:!
+0:"
+0:#
+b0 :$
+1:%
+1;
+0;!
+0;"
+0;#
+b0 ;$
+1;%
+0<
+0<!
+0<"
+b0 <#
+0<$
+1<%
+0=
+1=!
+b0 ="
+b0 =#
+0=$
+0=%
+b0 >
+0>!
+b0 >"
+0>#
+0>$
+0>%
+b0 ?
+0?!
+0?"
+0?#
+0?$
+0?%
+b0 @
+b0 @!
+0@"
+0@#
+0@$
+0@%
+0A
+b0 A!
+0A"
+b0 A#
+0A$
+0A%
+0B
+b0 B!
+0B"
+0B#
+b0 B$
+b10000000 B%
+0C
+0C!
+b0 C"
+b0 C#
+b0 C$
+bx C%
+0D
+0D!
+b0 D"
+0D#
+0D$
+bx D%
+0E
+0E!
+b0 E"
+0E#
+0E$
+bx E%
+b0 F
+0F!
+0F"
+0F#
+0F$
+bx F%
+b0 G
+0G!
+0G"
+0G#
+0G$
+b0 G%
+b0 H
+b0 H!
+b0 H"
+0H#
+b0 H$
+b0 H%
+0I
+b0 I!
+bx I"
+0I#
+0I$
+b0 I%
+0J
+b0 J!
+xJ"
+0J#
+b0 J$
+b0 J%
+0K
+0K!
+xK"
+1K#
+1K$
+b0 K%
+0L
+0L!
+bx L"
+0L#
+1L$
+b0 L%
+b0 M
+0M!
+xM"
+0M#
+0M$
+b0 M%
+0N
+0N!
+xN"
+0N#
+b0 N$
+0N%
+0O
+0O!
+0O"
+0O#
+0O$
+0O%
+0P
+0P!
+1P"
+0P#
+0P$
+1P%
+0Q
+b0 Q!
+b0 Q"
+0Q#
+b0 Q$
+0Q%
+0R
+bx R!
+b0 R"
+0R#
+b0 R$
+1R%
+0S
+bx S!
+0S"
+0S#
+b0 S$
+0S%
+0T
+b0 T!
+0T"
+0T#
+0T$
+b10000000 T%
+0U
+b0 U!
+1U"
+0U#
+0U$
+bx U%
+b0 V
+0V!
+0V"
+0V#
+0V$
+bx V%
+b0 W
+0W!
+0W"
+1W#
+b0 W$
+bx W%
+b0 X
+0X!
+b0 X"
+0X#
+b0 X$
+bx X%
+b0 Y
+0Y!
+b0 Y"
+0Y#
+0Y$
+bx Y%
+b0 Z
+b0 Z!
+b0 Z"
+b0 Z#
+0Z$
+b10000000 Z%
+0[
+b0 [!
+0["
+b0 [#
+0[$
+b10000000 [%
+x\
+b0 \!
+0\"
+b0 \#
+0\$
+bx \%
+b0 ]
+b0 ]!
+0]"
+0]#
+b0 ]$
+bx ]%
+0^
+0^!
+0^"
+0^#
+b0 ^$
+0^%
+0_
+0_!
+0_"
+0_#
+b0 _$
+0_%
+0`
+1`!
+b0 `"
+0`#
+0`$
+xa
+1a!
+b0 a"
+0a#
+0a$
+b0 b
+0b!
+b0 b"
+b0 b#
+b0 b$
+bx c
+0c!
+0c"
+b0 c#
+bx c$
+xd
+0d!
+0d"
+b0 d#
+xd$
+0e
+0e!
+0e"
+0e#
+xe$
+b0 f
+1f!
+0f"
+0f#
+bx f$
+b0 g
+0g!
+b0 g"
+0g#
+xg$
+b0 h
+0h!
+0h"
+0h#
+xh$
+b0 i
+0i!
+0i"
+0i#
+bz000000000000 i$
+b0 j
+0j!
+0j"
+0j#
+b0 j$
+0k
+0k!
+0k"
+b0 k#
+0k$
+xl
+1l!
+0l"
+bx l#
+1l$
+b0 m
+0m!
+0m"
+bx m#
+bx m$
+bx n
+b0 n!
+0n"
+b0 n#
+bx n$
+bx o
+b0 o!
+0o"
+b0 o#
+bx o$
+xp
+0p!
+b0 p"
+0p#
+bx p$
+xq
+0q!
+b0 q"
+0q#
+xq$
+0r
+0r!
+b0 r"
+0r#
+xr$
+0s
+0s!
+b0 s"
+0s#
+xs$
+0t
+b0 t!
+b0 t"
+b0 t#
+b10000 t$
+0u
+0u!
+0u"
+b0 u#
+b1010 u$
+0v
+b0 v!
+xv"
+b0 v#
+bx v$
+b0 w
+1w!
+b0 w"
+b0 w#
+bzxxxxxxxxxx w$
+0x
+1x!
+0x"
+0x#
+0x$
+1y
+0y!
+0y"
+0y#
+1y$
+0z
+b0 z!
+0z"
+1z#
+xz$
+0{
+0{!
+x{"
+1{#
+b100000 {$
+b0 |
+0|!
+b0 |"
+0|#
+b0 |$
+b0 }
+b0 }!
+bx }"
+0}#
+bx }$
+0~
+b0 ~!
+x~"
+0~#
+bz000000000000 ~$
+$end
+#100
+b0 I"
+0J"
+1K"
+b0 L"
+0M"
+1N"
+b0 c$
+0d$
+1e$
+b0 f$
+0g$
+1h$
+#5000
+1!
+1!%
+1%
+1&$
+bx &%
+1)
+bx .%
+10
+12
+14
+15
+19
+1;!
+1O"
+1S"
+1U#
+1j!
+1k$
+bz000000000000 n$
+bx o$
+bzxxxxxxxxxx v$
+1x$
+bz000000000000 }$
+#5100
+b100101010 *$
+b0 6$
+07$
+08$
+b0 9$
+b100101010 :$
+b100101010 T!
+b100101010 n!
+b100101010 n#
+b0 z!
+0{!
+0|!
+b0 }!
+b100101010 ~!
+#10000
+0!
+0%
+0&$
+00
+05
+09
+0;!
+0O"
+0S"
+0U#
+0j!
+#15000
+1!
+0!%
+1%
+1&$
+0)
+10
+02
+04
+15
+19
+1;!
+1O"
+1S"
+1U#
+1j!
+0k$
+0x$
+#15100
+b100101010 *
+b100101010 *$
+b100101010 +
+b100101010 +$
+bz000100101010 +%
+bx ,
+b100101010 /%
+x0%
+x1%
+b100101010 6$
+07$
+b100101010 8
+08$
+b0 9$
+b100101010 @
+b100101010 B!
+b100101010 R"
+b100101010 T!
+b100101010 Z"
+b100101010 \#
+bz000100101010 i$
+b100101010 j$
+b100101010 n!
+b100101010 n#
+b100101010 o!
+xq$
+xr$
+1s$
+b100101010 z!
+1z$
+0{!
+0|!
+b0 }!
+bz000100101010 ~$
+#20000
+0!
+0%
+0&$
+00
+05
+09
+0;!
+0O"
+0S"
+0U#
+0j!
+#25000
+1!
+1!%
+1%
+1&$
+b0 &%
+b1 (%
+1)
+bz0000000000 *%
+bx ,
+b0 .%
+10
+00%
+01%
+12
+14
+15
+19
+1;!
+1O"
+1S"
+1U#
+1j!
+1k$
+bz000100101010 n$
+b0 o$
+b1 p$
+0q$
+0r$
+xs$
+b0 v$
+bz0000000001 w$
+1x$
+xz$
+bz000100101010 }$
+#25100
+b100101010 *$
+b100101010 6$
+07$
+08$
+b0 9$
+b100101010 T!
+b100101010 n!
+b100101010 n#
+b100101010 z!
+0{!
+0|!
+b0 }!
+#30000
+0!
+0%
+0&$
+00
+05
+09
+0;!
+0O"
+0S"
+0U#
+0j!
+#35000
+1!
+0!%
+1%
+1&$
+0)
+10
+02
+04
+15
+19
+1;!
+1O"
+1S"
+1U#
+1j!
+0k$
+0x$
+#35100
+b100101010 *$
+b100101010 6$
+07$
+08$
+b0 9$
+b100101010 T!
+b100101010 n!
+b100101010 n#
+b100101010 z!
+0{!
+0|!
+b0 }!
+#40000
+0!
+0%
+0&$
+00
+05
+09
+0;!
+0O"
+0S"
+0U#
+0j!
+#45000
+1!
+1!%
+1%
+1&$
+b1 &%
+b10 (%
+1)
+bz0000000001 *%
+bx ,
+b1 .%
+10
+00%
+01%
+12
+14
+15
+19
+1;!
+1O"
+1S"
+1U#
+1j!
+1k$
+b1 o$
+b10 p$
+0q$
+0r$
+bz0000000001 v$
+bz0000000010 w$
+1x$
+bz000100101010 }$
+#45100
+b100101010 *$
+b100101010 6$
+07$
+08$
+b0 9$
+b100101010 T!
+b100101010 n!
+b100101010 n#
+b100101010 z!
+0{!
+0|!
+b0 }!
+#50000
+0!
+0%
+0&$
+00
+05
+09
+0;!
+0O"
+0S"
+0U#
+0j!
+#55000
+1!
+0!%
+1%
+1&$
+0)
+10
+02
+04
+15
+19
+1;!
+1O"
+1S"
+1U#
+1j!
+0k$
+0x$
+#55100
+b100101010 *$
+b100101010 6$
+07$
+08$
+b0 9$
+b100101010 T!
+b100101010 n!
+b100101010 n#
+b100101010 z!
+0{!
+0|!
+b0 }!
+#60000
+0!
+0%
+0&$
+00
+05
+09
+0;!
+0O"
+0S"
+0U#
+0j!
+#65000
+1!
+1!%
+1%
+1&$
+b10 &%
+b11 (%
+1)
+bz0000000010 *%
+bx ,
+b10 .%
+10
+00%
+01%
+12
+14
+15
+19
+1;!
+1O"
+1S"
+1U#
+1j!
+1k$
+b10 o$
+b11 p$
+0q$
+0r$
+bz0000000010 v$
+bz0000000011 w$
+1x$
+bz000100101010 }$
+#65100
+b100101010 *$
+b100101010 6$
+07$
+08$
+b0 9$
+b100101010 T!
+b100101010 n!
+b100101010 n#
+b100101010 z!
+0{!
+0|!
+b0 }!
+#70000
+0!
+0%
+0&$
+00
+05
+09
+0;!
+0O"
+0S"
+0U#
+0j!
+#75000
+1!
+0!%
+1%
+1&$
+0)
+10
+02
+04
+15
+19
+1;!
+1O"
+1S"
+1U#
+1j!
+0k$
+0x$
+#75100
+b100101010 *$
+b100101010 6$
+07$
+08$
+b0 9$
+b100101010 T!
+b100101010 n!
+b100101010 n#
+b100101010 z!
+0{!
+0|!
+b0 }!
+#80000
+0!
+0%
+0&$
+00
+05
+09
+0;!
+0O"
+0S"
+0U#
+0j!
+#85000
+1!
+1!%
+1%
+1&$
+b11 &%
+b100 (%
+1)
+bz0000000011 *%
+bx ,
+b11 .%
+10
+00%
+01%
+12
+14
+15
+19
+1;!
+1O"
+1S"
+1U#
+1j!
+1k$
+b11 o$
+b100 p$
+0q$
+0r$
+bz0000000011 v$
+bz0000000100 w$
+1x$
+bz000100101010 }$
+#85100
+b100101010 *$
+b100101010 6$
+07$
+08$
+b0 9$
+b100101010 T!
+b100101010 n!
+b100101010 n#
+b100101010 z!
+0{!
+0|!
+b0 }!
+#90000
+0!
+0%
+0&$
+00
+05
+09
+0;!
+0O"
+0S"
+0U#
+0j!
+#95000
+1!
+0!%
+1%
+1&$
+0)
+10
+02
+04
+15
+19
+1;!
+1O"
+1S"
+1U#
+1j!
+0k$
+0x$
+#95100
+b100101010 *$
+b100101010 6$
+07$
+08$
+b0 9$
+b100101010 T!
+b100101010 n!
+b100101010 n#
+b100101010 z!
+0{!
+0|!
+b0 }!
+#100000
+0!
+0%
+0&$
+00
+05
+09
+0;!
+0O"
+0S"
+0U#
+0j!
+#105000
+1!
+1!%
+1%
+1&$
+b100 &%
+b101 (%
+1)
+bz0000000100 *%
+bx ,
+b100 .%
+10
+00%
+01%
+12
+14
+15
+19
+1;!
+1O"
+1S"
+1U#
+1j!
+1k$
+b100 o$
+b101 p$
+0q$
+0r$
+bz0000000100 v$
+bz0000000101 w$
+1x$
+bz000100101010 }$
+#105100
+b100101010 *$
+b100101010 6$
+07$
+08$
+b0 9$
+b100101010 T!
+b100101010 n!
+b100101010 n#
+b100101010 z!
+0{!
+0|!
+b0 }!
