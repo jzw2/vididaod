@@ -4,7 +4,7 @@
 // d      (input)  - Next value of register
 // clk    (input)  - Clock (positive edge-sensitive)
 // enable (input)  - Load new value? (yes = 1, no = 0)
-// reset  (input)  - Synchronous reset    (reset = 1)
+// reset  (input)  - ASynchronous reset    (reset = 1)
 //
 module register(q, d, clk, enable, reset);
 
@@ -18,10 +18,12 @@ module register(q, d, clk, enable, reset);
    input                clk, enable, reset;
 
    always@(posedge clk)
-     if (reset == 1'b1)
-       q <= reset_value;
-     else if (enable == 1'b1)
+     if (enable == 1'b1)
        q <= d;
+
+     always @(reset)
+       if (reset == 1'b1)
+         q <= reset_value;
 
 endmodule // register
 
