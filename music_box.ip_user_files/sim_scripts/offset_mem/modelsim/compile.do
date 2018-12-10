@@ -1,14 +1,14 @@
 vlib work
 vlib msim
 
-vlib msim/blk_mem_gen_v8_3_1
+vlib msim/dist_mem_gen_v8_0_9
 vlib msim/xil_defaultlib
 
-vmap blk_mem_gen_v8_3_1 msim/blk_mem_gen_v8_3_1
+vmap dist_mem_gen_v8_0_9 msim/dist_mem_gen_v8_0_9
 vmap xil_defaultlib msim/xil_defaultlib
 
-vcom -work blk_mem_gen_v8_3_1 -64 -93 \
-"../../../ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" \
+vcom -work dist_mem_gen_v8_0_9 -64 -93 \
+"../../../ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../../music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" \

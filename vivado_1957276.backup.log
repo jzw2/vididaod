@@ -1,0 +1,1967 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Fri Dec  7 15:10:08 2018
+# Process ID: 1957276
+# Current directory: /home/kristbp2/cs296-33fa18-secret
+# Command line: vivado
+# Log file: /home/kristbp2/cs296-33fa18-secret/vivado.log
+# Journal file: /home/kristbp2/cs296-33fa18-secret/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/kristbp2/cs296-33fa18-secret/music_box.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/xilinx-2015/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 5879.820 ; gain = 111.785 ; free physical = 2020 ; free virtual = 9578
+update_compile_order -fileset sim_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+generate_target all [get_files  /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/lengths_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'lengths_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lengths_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lengths_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'lengths_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'lengths_mem'...
+export_ip_user_files -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/lengths_mem.xci] -no_script -force -quiet
+reset_run lengths_mem_synth_1
+launch_run -jobs 2 lengths_mem_synth_1
+[Fri Dec  7 15:12:04 2018] Launched lengths_mem_synth_1...
+Run output will be captured here: /home/kristbp2/cs296-33fa18-secret/music_box.runs/lengths_mem_synth_1/runme.log
+export_simulation -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/lengths_mem.xci] -directory /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/sim_scripts -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+generate_target all [get_files  /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/offset_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'offset_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'offset_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'offset_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'offset_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'offset_mem'...
+export_ip_user_files -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/offset_mem.xci] -no_script -force -quiet
+reset_run offset_mem_synth_1
+launch_run -jobs 2 offset_mem_synth_1
+[Fri Dec  7 15:12:16 2018] Launched offset_mem_synth_1...
+Run output will be captured here: /home/kristbp2/cs296-33fa18-secret/music_box.runs/offset_mem_synth_1/runme.log
+export_simulation -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/offset_mem.xci] -directory /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/sim_scripts -force -quiet
+generate_target all [get_files  /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sine_wave_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'sine_wave_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sine_wave_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sine_wave_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'sine_wave_mem'...
+export_ip_user_files -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sine_wave_mem.xci] -no_script -force -quiet
+reset_run sine_wave_mem_synth_1
+launch_run -jobs 2 sine_wave_mem_synth_1
+[Fri Dec  7 15:12:39 2018] Launched sine_wave_mem_synth_1...
+Run output will be captured here: /home/kristbp2/cs296-33fa18-secret/music_box.runs/sine_wave_mem_synth_1/runme.log
+export_simulation -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sine_wave_mem.xci] -directory /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/sim_scripts -force -quiet
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port enable [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:19]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port q [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:18]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.comparator(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 15:14:25 2018...
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 6013.598 ; gain = 0.000 ; free physical = 1638 ; free virtual = 9427
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 6058.629 ; gain = 45.031 ; free physical = 1623 ; free virtual = 9420
+run 10000 ns
+$finish called at time : 6288 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 45
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port enable [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:19]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port q [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:18]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.comparator(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 15:15:51 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 6060.543 ; gain = 0.000 ; free physical = 1617 ; free virtual = 9414
+run 10000 ns
+$finish called at time : 6288 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 45
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port enable [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:19]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port q [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:18]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.comparator(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 15:22:13 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 6081.332 ; gain = 15.785 ; free physical = 1599 ; free virtual = 9399
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+$finish called at time : 44790 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 45
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port enable [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:19]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port q [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:18]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.comparator(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 15:30:09 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 6093.340 ; gain = 0.000 ; free physical = 1599 ; free virtual = 9400
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+$finish called at time : 44790 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 45
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port enable [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:19]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port q [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:18]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.comparator(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 15:51:19 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 6114.758 ; gain = 6.023 ; free physical = 1570 ; free virtual = 9371
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+$finish called at time : 44790 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 45
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property -dict [list CONFIG.depth {2656}] [get_ips sine_wave_mem]
+generate_target all [get_files  /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sine_wave_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'sine_wave_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sine_wave_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sine_wave_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'sine_wave_mem'...
+export_ip_user_files -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sine_wave_mem.xci] -no_script -force -quiet
+reset_run sine_wave_mem_synth_1
+launch_run -jobs 2 sine_wave_mem_synth_1
+[Fri Dec  7 15:58:14 2018] Launched sine_wave_mem_synth_1...
+Run output will be captured here: /home/kristbp2/cs296-33fa18-secret/music_box.runs/sine_wave_mem_synth_1/runme.log
+export_simulation -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sine_wave_mem.xci] -directory /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/sim_scripts -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port enable [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:19]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port q [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:18]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.comparator(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 15:59:20 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 6129.770 ; gain = 10.004 ; free physical = 683 ; free virtual = 8578
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+$finish called at time : 44790 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 45
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true}] [get_ips lengths_mem]
+generate_target all [get_files  /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/lengths_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'lengths_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lengths_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lengths_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'lengths_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'lengths_mem'...
+export_ip_user_files -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/lengths_mem.xci] -no_script -force -quiet
+reset_run lengths_mem_synth_1
+launch_run -jobs 2 lengths_mem_synth_1
+[Fri Dec  7 16:05:34 2018] Launched lengths_mem_synth_1...
+Run output will be captured here: /home/kristbp2/cs296-33fa18-secret/music_box.runs/lengths_mem_synth_1/runme.log
+export_simulation -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/lengths_mem.xci] -directory /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/sim_scripts -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true}] [get_ips offset_mem]
+generate_target all [get_files  /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/offset_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'offset_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'offset_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'offset_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'offset_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'offset_mem'...
+export_ip_user_files -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/offset_mem.xci] -no_script -force -quiet
+reset_run offset_mem_synth_1
+launch_run -jobs 2 offset_mem_synth_1
+[Fri Dec  7 16:06:06 2018] Launched offset_mem_synth_1...
+Run output will be captured here: /home/kristbp2/cs296-33fa18-secret/music_box.runs/offset_mem_synth_1/runme.log
+export_simulation -of_objects [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/offset_mem.xci] -directory /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/sim_scripts -force -quiet
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port enable [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:19]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port q [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:18]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.comparator(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 16:07:36 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 6148.215 ; gain = 0.000 ; free physical = 1085 ; free virtual = 9032
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+$finish called at time : 44790 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 45
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 1 for port enable [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v:10]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port q [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:18]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.comparator(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 16:16:13 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 6148.215 ; gain = 0.000 ; free physical = 930 ; free virtual = 8878
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port q [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:18]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.comparator(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 16:17:01 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 6148.215 ; gain = 0.000 ; free physical = 926 ; free virtual = 8874
+run 10000 ns
+run all
+$finish called at time : 44800 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 47
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.comparator(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 16:19:59 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 6148.215 ; gain = 0.000 ; free physical = 959 ; free virtual = 8906
+run all
+$finish called at time : 44800 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 47
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 16:22:17 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 6148.215 ; gain = 0.000 ; free physical = 1070 ; free virtual = 9017
+run all
+$finish called at time : 44800 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 47
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 16:24:36 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 6148.215 ; gain = 0.000 ; free physical = 1065 ; free virtual = 9013
+run all
+$finish called at time : 44800 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 47
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'note_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/offset_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_offsets.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/lengths_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform_lengths.coe'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_wave_mem.mif'
+INFO: [USF-XSim-25] Exported '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/sine_waveform.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+xvlog -m64 --relax -prj note_decoder_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-311] analyzing module mux4
+INFO: [VRFC 10-311] analyzing module mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module octave_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wave_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj note_decoder_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd" into library dist_mem_gen_v8_0_9
+INFO: [VRFC 10-307] analyzing entity dist_mem_gen_v8_0_9
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sim/sine_wave_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sine_wave_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity offset_mem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/lengths_mem/sim/lengths_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lengths_mem
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 7 for port note [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:10]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder.v:12]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package ieee.std_logic_textio
+Compiling module xil_defaultlib.octave_decoder
+Compiling module xil_defaultlib.clock_divider
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture lengths_mem_arch of entity xil_defaultlib.lengths_mem [lengths_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
+Compiling module xil_defaultlib.register(width=12)
+Compiling module xil_defaultlib.adder(width=12)
+Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
+Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",12...]
+Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
+Compiling module xil_defaultlib.note_decoder
+Compiling module xil_defaultlib.note_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot note_decoder_tb_behav
+
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/xsim.dir/note_decoder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec  7 16:28:38 2018...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch {note_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source note_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'note_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 6148.215 ; gain = 0.000 ; free physical = 1051 ; free virtual = 8999
+run all
+$finish called at time : 44800 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 47
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  7 16:40:55 2018...

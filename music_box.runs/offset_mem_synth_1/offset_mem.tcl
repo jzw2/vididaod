@@ -18,6 +18,8 @@ set_property vhdl_version vhdl_2k [current_fileset]
 read_ip /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/offset_mem.xci
 set_property is_locked true [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/offset_mem/offset_mem.xci]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 synth_design -top offset_mem -part xc7a35tcpg236-1 -mode out_of_context
 rename_ref -prefix_all offset_mem_
 write_checkpoint -noxdef offset_mem.dcp

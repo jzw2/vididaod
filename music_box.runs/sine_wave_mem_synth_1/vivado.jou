@@ -2,8 +2,8 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Wed Dec  5 15:53:14 2018
-# Process ID: 1304756
+# Start of session at: Mon Dec 10 11:59:42 2018
+# Process ID: 15725
 # Current directory: /home/kristbp2/cs296-33fa18-secret/music_box.runs/sine_wave_mem_synth_1
 # Command line: vivado -log sine_wave_mem.vds -mode batch -messageDb vivado.pb -notrace -source sine_wave_mem.tcl
 # Log file: /home/kristbp2/cs296-33fa18-secret/music_box.runs/sine_wave_mem_synth_1/sine_wave_mem.vds
