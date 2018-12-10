@@ -9,4 +9,4 @@ then
 exit $RETVAL
 fi
 }
-ExecStep $xv_path/bin/xelab -wto b500bd346b0149adb8c4abe2bee709e8 -m64 --debug typical --relax --mt 8 -L xil_defaultlib -L dist_mem_gen_v8_0_9 -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_tb_behav xil_defaultlib.note_decoder_tb xil_defaultlib.glbl -log elaborate.log
+ExecStep $xv_path/bin/xelab -wto b500bd346b0149adb8c4abe2bee709e8 -m64 --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_3_1 -L dist_mem_gen_v8_0_9 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_full_tb_behav xil_defaultlib.note_decoder_full_tb xil_defaultlib.glbl -log elaborate.log

@@ -9,4 +9,4 @@ then
 exit $RETVAL
 fi
 }
-ExecStep $xv_path/bin/xsim note_decoder_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_tb} -tclbatch note_decoder_tb.tcl -log simulate.log
+ExecStep $xv_path/bin/xsim note_decoder_full_tb_behav -key {Behavioral:sim_1:Functional:note_decoder_full_tb} -tclbatch note_decoder_full_tb.tcl -log simulate.log

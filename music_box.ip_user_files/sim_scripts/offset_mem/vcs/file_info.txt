@@ -1,3 +1,3 @@
-Language File-Name             IP          Library             File-Path                                                            
-VHDL,    blk_mem_gen_v8_3.vhd, offset_mem, blk_mem_gen_v8_3_1, ../../../ipstatic/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd 
-VHDL,    offset_mem.vhd,       offset_mem, xil_defaultlib,     ../../../../music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd
+Language File-Name              IP          Library              File-Path                                                             
+VHDL,    dist_mem_gen_v8_0.vhd, offset_mem, dist_mem_gen_v8_0_9, ../../../ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+VHDL,    offset_mem.vhd,        offset_mem, xil_defaultlib,      ../../../../music_box.srcs/sources_1/ip/offset_mem/sim/offset_mem.vhd 

@@ -1,5 +1,7 @@
 Vivado Simulator 2015.4
 Time resolution is 1 ps
 Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
-Time: 0 ps  Iteration: 0  Process: /note_decoder_tb/main/memoryWave/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
-$finish called at time : 110 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_tb.v" Line 19
+Time: 0 ps  Iteration: 0  Process: /note_decoder_full_tb/main/offsets_mem/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Time: 0 ps  Iteration: 0  Process: /note_decoder_full_tb/main/lengths_mem/U0/p_warn_behavioural  File: /home/kristbp2/cs296-33fa18-secret/music_box.ip_user_files/ipstatic/dist_mem_gen_v8_0_9/simulation/dist_mem_gen_v8_0.vhd
+$finish called at time : 477810 ns : File "/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full_tb.v" Line 51

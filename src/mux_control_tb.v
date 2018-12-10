@@ -15,7 +15,7 @@ module mux_control_tb();
   mux_control muhmain(buttons, switch, clk, reset, out);
    
    initial begin
-      $dumpfile("bigdump.vcd");
+      $dumpfile("mux_control.vcd");
       $dumpvars(0, mux_control_tb);
 
       #10

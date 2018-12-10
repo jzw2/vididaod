@@ -16,11 +16,8 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
 read_ip /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sine_wave_mem.xci
-set_property used_in_implementation false [get_files -all /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sine_wave_mem.dcp]
 set_property is_locked true [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/sine_wave_mem/sine_wave_mem.xci]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 synth_design -top sine_wave_mem -part xc7a35tcpg236-1 -mode out_of_context
 rename_ref -prefix_all sine_wave_mem_
 write_checkpoint -noxdef sine_wave_mem.dcp
