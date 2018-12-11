@@ -1,0 +1,72 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
+| Date         : Mon Dec 10 19:00:18 2018
+| Host         : siebl-0224-38.ews.illinois.edu running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : report_control_sets -verbose -file toplevel_control_sets_placed.rpt
+| Design       : toplevel
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    19 |
+| Minimum Number of register sites lost to control set restrictions |    54 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              18 |           11 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             232 |           56 |
+| Yes          | No                    | No                     |              96 |           31 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------+------------------------------------------+----------------------------------------+------------------+----------------+
+|          Clock Signal          |               Enable Signal              |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++--------------------------------+------------------------------------------+----------------------------------------+------------------+----------------+
+|  main_module/pclk/inst/clk_out |                                          |                                        |                1 |              1 |
+|  main_module/pclk2/q_reg[0]    |                                          |                                        |                1 |              1 |
+|  ndc/inst/clk_out              |                                          |                                        |                3 |              3 |
+|  counter_reg[0]_i_3__1_n_0     |                                          |                                        |                3 |              3 |
+|  clk_IBUF_BUFG                 |                                          |                                        |                3 |             10 |
+|  ndf/ob3/div1/CLK              |                                          | main_module/reset                      |                3 |             12 |
+|  ndf/ob3/div1/CLK              |                                          | main_module/q_reg[0]                   |                2 |             12 |
+|  ndf/ob3/div3/q_reg[11]        |                                          | main_module/reset_0                    |                3 |             12 |
+|  ndf/ob3/div3/q_reg[11]        |                                          | main_module/q_reg[0]_0                 |                3 |             12 |
+|  ndf/ob3/div2/q_reg[11]        |                                          | main_module/reset_1                    |                3 |             12 |
+|  ndf/ob3/div2/q_reg[11]        |                                          | main_module/q_reg[0]_1                 |                2 |             12 |
+|  main_module/pclk/inst/clk_out |                                          | main_module/pclk2/clear                |                8 |             32 |
+|  counter_reg[0]_i_3__1_n_0     |                                          | ndf/ob3/div1/counter_reg[0]_i_1_n_0    |                8 |             32 |
+|  counter_reg[0]_i_3__1_n_0     |                                          | ndf/ob3/div3/counter_reg[0]_i_1__1_n_0 |                8 |             32 |
+|  counter_reg[0]_i_3__1_n_0     |                                          | ndf/ob3/div2/counter_reg[0]_i_1__0_n_0 |                8 |             32 |
+|  ndc/inst/clk_out              | ndf/lengths_mux_counter/q_reg[0]         |                                        |               10 |             32 |
+|  ndc/inst/clk_out              | ndf/lengths_mux_counter/counter_reg[1]_0 |                                        |                9 |             32 |
+|  ndc/inst/clk_out              | ndf/lengths_mux_counter/counter_reg[0]_0 |                                        |               12 |             32 |
+|  ndc/inst/clk_out              |                                          | ndf/main_div/counter[0]_i_1__0_n_0     |                8 |             32 |
++--------------------------------+------------------------------------------+----------------------------------------+------------------+----------------+
+
+

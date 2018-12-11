@@ -1,0 +1,912 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Dec 10 18:59:19 2018
+# Process ID: 53260
+# Current directory: /home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1
+# Command line: vivado -log toplevel.vds -mode batch -messageDb vivado.pb -notrace -source toplevel.tcl
+# Log file: /home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/toplevel.vds
+# Journal file: /home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source toplevel.tcl -notrace
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /software/xilinx-2015/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+Command: synth_design -top toplevel -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2017.02' and will expire in -650 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1073.297 ; gain = 140.918 ; free physical = 10363 ; free virtual = 16522
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'toplevel' [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:1]
+INFO: [Synth 8-638] synthesizing module 'main' [/home/kristbp2/cs296-33fa18-secret/src/main.v:25]
+INFO: [Synth 8-638] synthesizing module 'mux_control' [/home/kristbp2/cs296-33fa18-secret/src/mux_control.v:1]
+INFO: [Synth 8-638] synthesizing module 'register' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 1 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register' (1#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'priority_encoder' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:1]
+INFO: [Synth 8-256] done synthesizing module 'priority_encoder' (2#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:1]
+INFO: [Synth 8-256] done synthesizing module 'mux_control' (3#1) [/home/kristbp2/cs296-33fa18-secret/src/mux_control.v:1]
+INFO: [Synth 8-638] synthesizing module 'mux8' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:61]
+	Parameter width bound to: 15 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mux4' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+	Parameter width bound to: 15 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mux2' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2' (4#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-256] done synthesizing module 'mux4' (5#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+INFO: [Synth 8-256] done synthesizing module 'mux8' (6#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:61]
+INFO: [Synth 8-638] synthesizing module 'player_clock' [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/player_clock_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'player_clock' (7#1) [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/player_clock_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v:1]
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (8#1) [/home/kristbp2/cs296-33fa18-secret/src/clock_divider.v:1]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized0' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 15 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized0' (8#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'main_mem' [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/main_mem_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'main_mem' (9#1) [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/main_mem_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'main' (10#1) [/home/kristbp2/cs296-33fa18-secret/src/main.v:25]
+INFO: [Synth 8-638] synthesizing module 'note_decoder_clock' [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/note_decoder_clock_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'note_decoder_clock' (11#1) [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/note_decoder_clock_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'note_decoder_full' [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:44]
+INFO: [Synth 8-638] synthesizing module 'octave_block_3' [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:1]
+INFO: [Synth 8-638] synthesizing module 'octave_decoder' [/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v:1]
+INFO: [Synth 8-256] done synthesizing module 'octave_decoder' (12#1) [/home/kristbp2/cs296-33fa18-secret/src/octave_decoder.v:1]
+WARNING: [Synth 8-689] width (15) of port connection 'div_amt' does not match port width (32) of module 'clock_divider' [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:11]
+WARNING: [Synth 8-689] width (15) of port connection 'div_amt' does not match port width (32) of module 'clock_divider' [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:12]
+WARNING: [Synth 8-689] width (15) of port connection 'div_amt' does not match port width (32) of module 'clock_divider' [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:13]
+INFO: [Synth 8-256] done synthesizing module 'octave_block_3' (13#1) [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:1]
+INFO: [Synth 8-638] synthesizing module 'mux_counter' [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:30]
+INFO: [Synth 8-256] done synthesizing module 'mux_counter' (14#1) [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:30]
+INFO: [Synth 8-638] synthesizing module 'mux4__parameterized0' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized0' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized0' (14#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized1' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized1' (14#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized2' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized2' (14#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-256] done synthesizing module 'mux4__parameterized0' (14#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+INFO: [Synth 8-638] synthesizing module 'length_mem' [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/length_mem_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'length_mem' (15#1) [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/length_mem_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized1' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 12 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized1' (15#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized2' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 12 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized2' (15#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized3' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 12 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized3' (15#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'mux4__parameterized1' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized3' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized3' (15#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized4' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized4' (15#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized5' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized5' (15#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-256] done synthesizing module 'mux4__parameterized1' (15#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+INFO: [Synth 8-638] synthesizing module 'offset_mem' [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/offset_mem_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'offset_mem' (16#1) [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/offset_mem_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized4' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 12 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized4' (16#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized5' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 12 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized5' (16#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized6' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 12 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized6' (16#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'wave_counter_block_3' [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:16]
+INFO: [Synth 8-638] synthesizing module 'wave_counter' [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:1]
+	Parameter addr_size bound to: 12 - type: integer 
+	Parameter reset_size bound to: 12 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'register__parameterized7' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 12 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized7' (16#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized8' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 12 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized8' (16#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'adder' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:27]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder' (17#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:27]
+INFO: [Synth 8-256] done synthesizing module 'wave_counter' (18#1) [/home/kristbp2/cs296-33fa18-secret/src/wave_counter.v:1]
+INFO: [Synth 8-256] done synthesizing module 'wave_counter_block_3' (19#1) [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:16]
+INFO: [Synth 8-638] synthesizing module 'mux4__parameterized2' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized6' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized6' (19#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized7' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized7' (19#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized8' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized8' (19#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-256] done synthesizing module 'mux4__parameterized2' (19#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+INFO: [Synth 8-638] synthesizing module 'sine_wave_mem' [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/sine_wave_mem_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'sine_wave_mem' (20#1) [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/sine_wave_mem_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized9' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized9' (20#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized10' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized10' (20#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized11' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized11' (20#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'mux4__parameterized3' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized9' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized9' (20#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized10' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized10' (20#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized11' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized11' (20#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-256] done synthesizing module 'mux4__parameterized3' (20#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+INFO: [Synth 8-638] synthesizing module 'triangle_wave_mem' [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/triangle_wave_mem_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'triangle_wave_mem' (21#1) [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/triangle_wave_mem_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized12' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized12' (21#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized13' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized13' (21#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized14' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized14' (21#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'mux4__parameterized4' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized12' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized12' (21#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized13' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized13' (21#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized14' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized14' (21#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-256] done synthesizing module 'mux4__parameterized4' (21#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+INFO: [Synth 8-638] synthesizing module 'square_wave_mem' [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/square_wave_mem_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'square_wave_mem' (22#1) [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/square_wave_mem_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized15' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized15' (22#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized16' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized16' (22#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized17' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized17' (22#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'mux4__parameterized5' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized15' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized15' (22#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized16' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized16' (22#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized17' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized17' (22#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-256] done synthesizing module 'mux4__parameterized5' (22#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+INFO: [Synth 8-638] synthesizing module 'saw_wave_mem' [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/saw_wave_mem_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'saw_wave_mem' (23#1) [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/realtime/saw_wave_mem_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized18' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized18' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized19' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized19' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'register__parameterized20' [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+	Parameter width bound to: 8 - type: integer 
+	Parameter reset_value bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register__parameterized20' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/register.v:9]
+INFO: [Synth 8-638] synthesizing module 'combiner_block_3' [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:22]
+INFO: [Synth 8-638] synthesizing module 'mux4__parameterized6' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized18' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized18' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized19' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized19' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized20' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized20' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-256] done synthesizing module 'mux4__parameterized6' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+INFO: [Synth 8-638] synthesizing module 'mux4__parameterized7' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized21' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized21' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized22' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized22' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized23' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized23' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-256] done synthesizing module 'mux4__parameterized7' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+INFO: [Synth 8-638] synthesizing module 'mux4__parameterized8' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized24' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized24' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized25' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized25' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-638] synthesizing module 'mux2__parameterized26' [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2__parameterized26' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:36]
+INFO: [Synth 8-256] done synthesizing module 'mux4__parameterized8' (23#1) [/home/kristbp2/cs296-33fa18-secret/src/modules.v:47]
+INFO: [Synth 8-256] done synthesizing module 'combiner_block_3' (24#1) [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:22]
+INFO: [Synth 8-256] done synthesizing module 'note_decoder_full' (25#1) [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:44]
+INFO: [Synth 8-256] done synthesizing module 'toplevel' (26#1) [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1112.688 ; gain = 180.309 ; free physical = 10321 ; free virtual = 16481
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin lengths_mux:in3[3] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:57]
+WARNING: [Synth 8-3295] tying undriven pin lengths_mux:in3[2] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:57]
+WARNING: [Synth 8-3295] tying undriven pin lengths_mux:in3[1] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:57]
+WARNING: [Synth 8-3295] tying undriven pin lengths_mux:in3[0] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:57]
+WARNING: [Synth 8-3295] tying undriven pin offsets_mux:in3[3] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:69]
+WARNING: [Synth 8-3295] tying undriven pin offsets_mux:in3[2] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:69]
+WARNING: [Synth 8-3295] tying undriven pin offsets_mux:in3[1] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:69]
+WARNING: [Synth 8-3295] tying undriven pin offsets_mux:in3[0] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:69]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[11] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[10] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[9] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[8] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[7] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[6] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[5] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[4] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[3] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[2] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[1] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin sine_waves_mux:in3[0] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:84]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[11] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[10] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[9] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[8] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[7] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[6] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[5] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[4] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[3] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[2] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[1] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin triangle_waves_mux:in3[0] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:95]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[11] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[10] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[9] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[8] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[7] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[6] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[5] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[4] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[3] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[2] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[1] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin square_waves_mux:in3[0] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:106]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[11] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[10] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[9] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[8] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[7] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[6] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[5] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[4] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[3] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[2] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[1] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin saw_waves_mux:in3[0] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:117]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[26] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[25] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[24] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[23] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[22] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[21] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[20] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[19] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[18] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[17] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[16] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[15] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[14] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[13] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[12] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[11] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[10] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[9] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[8] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[7] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[6] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[5] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[4] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[3] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[2] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[1] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+WARNING: [Synth 8-3295] tying undriven pin main_module:key[0] to constant 0 [/home/kristbp2/cs296-33fa18-secret/src/toplevel.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1112.688 ; gain = 180.309 ; free physical = 10321 ; free virtual = 16481
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp/sine_wave_mem_in_context.xdc] for cell 'ndf/sine_waves_mem'
+Finished Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp/sine_wave_mem_in_context.xdc] for cell 'ndf/sine_waves_mem'
+Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_2/triangle_wave_mem_in_context.xdc] for cell 'ndf/triangle_waves_mem'
+Finished Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_2/triangle_wave_mem_in_context.xdc] for cell 'ndf/triangle_waves_mem'
+Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_3/square_wave_mem_in_context.xdc] for cell 'ndf/square_waves_mem'
+Finished Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_3/square_wave_mem_in_context.xdc] for cell 'ndf/square_waves_mem'
+Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_4/saw_wave_mem_in_context.xdc] for cell 'ndf/saw_waves_mem'
+Finished Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_4/saw_wave_mem_in_context.xdc] for cell 'ndf/saw_waves_mem'
+Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_5/length_mem_in_context.xdc] for cell 'ndf/lengths_mem'
+Finished Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_5/length_mem_in_context.xdc] for cell 'ndf/lengths_mem'
+Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_6/offset_mem_in_context.xdc] for cell 'ndf/offsets_mem'
+Finished Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_6/offset_mem_in_context.xdc] for cell 'ndf/offsets_mem'
+Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_7/main_mem_in_context.xdc] for cell 'main_module/memory'
+Finished Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_7/main_mem_in_context.xdc] for cell 'main_module/memory'
+Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_8/note_decoder_clock_in_context.xdc] for cell 'ndc'
+Finished Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_8/note_decoder_clock_in_context.xdc] for cell 'ndc'
+Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_9/player_clock_in_context.xdc] for cell 'main_module/pclk'
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_9/player_clock_in_context.xdc:1]
+Finished Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_9/player_clock_in_context.xdc] for cell 'main_module/pclk'
+Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/src/Basys3_Master.xdc]
+Finished Parsing XDC File [/home/kristbp2/cs296-33fa18-secret/src/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kristbp2/cs296-33fa18-secret/src/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/toplevel_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1405.781 ; gain = 0.000 ; free physical = 10068 ; free virtual = 16228
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context implementation of instance 'main_module/memory' at clock pin 'clka' is different from the actual clock period '10.000', this can result in different implementation results.
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 53288 
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1405.789 ; gain = 473.410 ; free physical = 10065 ; free virtual = 16225
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1405.789 ; gain = 473.410 ; free physical = 10065 ; free virtual = 16225
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  /home/kristbp2/cs296-33fa18-secret/music_box.runs/synth_1/.Xil/Vivado-53260-siebl-0224-38.ews.illinois.edu/dcp_9/player_clock_in_context.xdc, line 3).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1405.789 ; gain = 473.410 ; free physical = 10065 ; free virtual = 16225
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1405.789 ; gain = 473.410 ; free physical = 10067 ; free virtual = 16227
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'ndf/lengths_mux_counter' (mux_counter) to 'ndf/offsets_mux_counter'
+INFO: [Synth 8-223] decloning instance 'ndf/lengths_mux_counter' (mux_counter) to 'ndf/sine_waves_mux_counter'
+INFO: [Synth 8-223] decloning instance 'ndf/lengths_mux_counter' (mux_counter) to 'ndf/triangle_waves_mux_counter'
+INFO: [Synth 8-223] decloning instance 'ndf/lengths_mux_counter' (mux_counter) to 'ndf/square_waves_mux_counter'
+INFO: [Synth 8-223] decloning instance 'ndf/lengths_mux_counter' (mux_counter) to 'ndf/saw_waves_mux_counter'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 6     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               15 Bit    Registers := 1     
+	               12 Bit    Registers := 12    
+	                8 Bit    Registers := 12    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module register 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clock_divider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module register__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               15 Bit    Registers := 1     
+Module main 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 1     
+Module mux_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+Module register__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module register__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module register__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module register__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module register__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module register__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module register__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module register__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+Module register__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module register__parameterized10 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module register__parameterized11 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module register__parameterized12 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module register__parameterized13 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module register__parameterized14 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module register__parameterized15 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module register__parameterized16 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module register__parameterized17 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module register__parameterized18 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module register__parameterized19 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module register__parameterized20 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module combiner_block_3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1405.789 ; gain = 473.410 ; free physical = 10067 ; free virtual = 16227
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1405.789 ; gain = 473.410 ; free physical = 10069 ; free virtual = 16229
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1405.789 ; gain = 473.410 ; free physical = 10069 ; free virtual = 16229
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[13] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[14] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[12] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[11] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[10] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[9] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[8] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[7] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[6] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[5] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[4] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[3] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3886] merging instance '\main_module/PC_Reg/q_reg[2] ' (FDR) to '\main_module/PC_Reg/q_reg[1] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\main_module/PC_Reg/q_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[14] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[13] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[12] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[11] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[10] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[9] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[8] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[7] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[6] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[5] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[4] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[3] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[2] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/PC_Reg/q_reg[1] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_1/q_reg[7] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_1/q_reg[6] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_1/q_reg[5] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_1/q_reg[4] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_1/q_reg[3] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_1/q_reg[2] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_1/q_reg[1] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_2/q_reg[7] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_2/q_reg[6] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_2/q_reg[5] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_2/q_reg[4] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_2/q_reg[3] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_2/q_reg[2] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_2/q_reg[1] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_3/q_reg[7] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_3/q_reg[6] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_3/q_reg[5] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_3/q_reg[4] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_3/q_reg[3] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_3/q_reg[2] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/triangle_waves_reg_3/q_reg[1] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_1/q_reg[7] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_1/q_reg[6] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_1/q_reg[5] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_1/q_reg[4] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_1/q_reg[3] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_1/q_reg[2] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_1/q_reg[1] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_2/q_reg[7] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_2/q_reg[6] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_2/q_reg[5] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_2/q_reg[4] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_2/q_reg[3] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_2/q_reg[2] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_2/q_reg[1] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_3/q_reg[7] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_3/q_reg[6] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_3/q_reg[5] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_3/q_reg[4] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_3/q_reg[3] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_3/q_reg[2] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/square_waves_reg_3/q_reg[1] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_1/q_reg[7] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_1/q_reg[6] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_1/q_reg[5] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_1/q_reg[4] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_1/q_reg[3] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_1/q_reg[2] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_1/q_reg[1] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_2/q_reg[7] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_2/q_reg[6] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_2/q_reg[5] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_2/q_reg[4] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_2/q_reg[3] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_2/q_reg[2] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_2/q_reg[1] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_3/q_reg[7] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_3/q_reg[6] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_3/q_reg[5] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_3/q_reg[4] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_3/q_reg[3] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_3/q_reg[2] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\ndf/saw_waves_reg_3/q_reg[1] ) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (\main_module/mux_ctrl_mod/last_state_reg/q_reg[0] ) is unused and will be removed from module toplevel.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1405.797 ; gain = 473.418 ; free physical = 10066 ; free virtual = 16226
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1405.797 ; gain = 473.418 ; free physical = 10066 ; free virtual = 16226
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'ndc/clk_out' to pin 'ndc/bbstub_clk_out/O'
+WARNING: [Synth 8-565] redefining clock 'clk'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'main_module/pclk/clk_out' to pin 'main_module/pclk/bbstub_clk_out/O'
+INFO: Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1405.797 ; gain = 473.418 ; free physical = 10059 ; free virtual = 16219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1405.797 ; gain = 473.418 ; free physical = 10059 ; free virtual = 16219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.789 ; gain = 474.410 ; free physical = 10059 ; free virtual = 16219
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.789 ; gain = 474.410 ; free physical = 10059 ; free virtual = 16219
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.789 ; gain = 474.410 ; free physical = 10059 ; free virtual = 16219
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.789 ; gain = 474.410 ; free physical = 10059 ; free virtual = 16219
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.789 ; gain = 474.410 ; free physical = 10059 ; free virtual = 16219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.789 ; gain = 474.410 ; free physical = 10059 ; free virtual = 16219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.789 ; gain = 474.410 ; free physical = 10059 ; free virtual = 16219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.789 ; gain = 474.410 ; free physical = 10059 ; free virtual = 16219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.789 ; gain = 474.410 ; free physical = 10059 ; free virtual = 16219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------+----------+
+|      |BlackBox name      |Instances |
++------+-------------------+----------+
+|1     |note_decoder_clock |         1|
+|2     |player_clock       |         1|
+|3     |main_mem           |         1|
+|4     |length_mem         |         1|
+|5     |offset_mem         |         1|
+|6     |sine_wave_mem      |         1|
+|7     |triangle_wave_mem  |         1|
+|8     |square_wave_mem    |         1|
+|9     |saw_wave_mem       |         1|
++------+-------------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |length_mem         |     1|
+|2     |main_mem           |     1|
+|3     |note_decoder_clock |     1|
+|4     |offset_mem         |     1|
+|5     |player_clock       |     1|
+|6     |saw_wave_mem       |     1|
+|7     |sine_wave_mem      |     1|
+|8     |square_wave_mem    |     1|
+|9     |triangle_wave_mem  |     1|
+|10    |BUFG               |     1|
+|11    |CARRY4             |    75|
+|12    |LUT1               |   196|
+|13    |LUT2               |   113|
+|14    |LUT3               |     4|
+|15    |LUT4               |    47|
+|16    |LUT5               |    14|
+|17    |LUT6               |    49|
+|18    |MUXF7              |     1|
+|19    |FDRE               |   340|
+|20    |FDSE               |     5|
+|21    |IBUF               |     5|
+|22    |OBUF               |     8|
++------+-------------------+------+
+
+Report Instance Areas: 
++------+-------------------------+---------------------------+------+
+|      |Instance                 |Module                     |Cells |
++------+-------------------------+---------------------------+------+
+|1     |top                      |                           |   943|
+|2     |  main_module            |main                       |   143|
+|3     |    PC_Reg               |register__parameterized0   |     3|
+|4     |    pclk2                |clock_divider_9            |    85|
+|5     |  ndf                    |note_decoder_full          |   785|
+|6     |    lengths_mux_counter  |mux_counter                |     5|
+|7     |    lengths_reg_1        |register__parameterized1   |    18|
+|8     |    lengths_reg_2        |register__parameterized2   |    18|
+|9     |    lengths_reg_3        |register__parameterized3   |    18|
+|10    |    main_div             |clock_divider              |    81|
+|11    |    ob3                  |octave_block_3             |   321|
+|12    |      div1               |clock_divider_6            |   107|
+|13    |      div2               |clock_divider_7            |   107|
+|14    |      div3               |clock_divider_8            |   107|
+|15    |    offsets_reg_1        |register__parameterized4   |    12|
+|16    |    offsets_reg_2        |register__parameterized5   |    13|
+|17    |    offsets_reg_3        |register__parameterized6   |    12|
+|18    |    saw_waves_reg_1      |register__parameterized18  |     2|
+|19    |    saw_waves_reg_2      |register__parameterized19  |     2|
+|20    |    saw_waves_reg_3      |register__parameterized20  |     5|
+|21    |    sine_waves_reg_1     |register__parameterized9   |    10|
+|22    |    sine_waves_reg_2     |register__parameterized10  |    20|
+|23    |    sine_waves_reg_3     |register__parameterized11  |    14|
+|24    |    square_waves_reg_1   |register__parameterized15  |     1|
+|25    |    square_waves_reg_2   |register__parameterized16  |     1|
+|26    |    square_waves_reg_3   |register__parameterized17  |     1|
+|27    |    triangle_waves_reg_1 |register__parameterized12  |     1|
+|28    |    triangle_waves_reg_2 |register__parameterized13  |     1|
+|29    |    triangle_waves_reg_3 |register__parameterized14  |     1|
+|30    |    wcb3                 |wave_counter_block_3       |   172|
+|31    |      wc1                |wave_counter               |    67|
+|32    |        addr_adder       |adder                      |    15|
+|33    |        last_addr_reg    |register__parameterized8_4 |    17|
+|34    |        offset_reg       |register__parameterized7_5 |    35|
+|35    |      wc2                |wave_counter_0             |    52|
+|36    |        last_addr_reg    |register__parameterized8_2 |    16|
+|37    |        offset_reg       |register__parameterized7_3 |    36|
+|38    |      wc3                |wave_counter_1             |    53|
+|39    |        last_addr_reg    |register__parameterized8   |    17|
+|40    |        offset_reg       |register__parameterized7   |    36|
++------+-------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.789 ; gain = 474.410 ; free physical = 10059 ; free virtual = 16219
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 79 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1406.789 ; gain = 89.383 ; free physical = 10059 ; free virtual = 16219
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.789 ; gain = 474.410 ; free physical = 10059 ; free virtual = 16219
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 80 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+200 Infos, 168 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1406.797 ; gain = 403.078 ; free physical = 10059 ; free virtual = 16219
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1438.812 ; gain = 0.000 ; free physical = 10058 ; free virtual = 16218
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 10 18:59:51 2018...

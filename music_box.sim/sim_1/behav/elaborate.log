@@ -1,64 +1,7 @@
 Vivado Simulator 2015.4
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_3_1 -L dist_mem_gen_v8_0_9 -L unisims_ver -L unimacro_ver -L secureip --snapshot note_decoder_full_tb_behav xil_defaultlib.note_decoder_full_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /software/xilinx-2015/Vivado/2015.4/bin/unwrapped/lnx64.o/xelab -wto b500bd346b0149adb8c4abe2bee709e8 --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_3_1 -L unisims_ver -L unimacro_ver -L secureip --snapshot main_tb_behav xil_defaultlib.main_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 44 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:11]
-WARNING: [VRFC 10-278] actual bit length 44 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:12]
-WARNING: [VRFC 10-278] actual bit length 44 differs from formal bit length 16 for port div_amt [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:13]
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 12 for port in0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:57]
-WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port in0 [/home/kristbp2/cs296-33fa18-secret/src/modules.v:55]
-WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port in0 [/home/kristbp2/cs296-33fa18-secret/src/modules.v:56]
-WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 32 for port in0 [/home/kristbp2/cs296-33fa18-secret/src/modules.v:57]
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 12 for port in0 [/home/kristbp2/cs296-33fa18-secret/src/note_decoder_full.v:69]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "/home/kristbp2/cs296-33fa18-secret/music_box.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package std.textio
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package synopsys.attributes
-Compiling package ieee.std_logic_misc
-Compiling package ieee.std_logic_textio
-Compiling module xil_defaultlib.clock_divider
-Compiling module xil_defaultlib.octave_decoder
-Compiling module xil_defaultlib.octave_block_3
-Compiling module xil_defaultlib.mux_counter
-Compiling module xil_defaultlib.mux2
-Compiling module xil_defaultlib.mux4(width=12)
-Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",4,...]
-Compiling architecture length_mem_arch of entity xil_defaultlib.length_mem [length_mem_default]
-Compiling module xil_defaultlib.register(width=12)
-Compiling architecture behavioral of entity dist_mem_gen_v8_0_9.dist_mem_gen_v8_0_9 [\dist_mem_gen_v8_0_9("artix7",4,...]
-Compiling architecture offset_mem_arch of entity xil_defaultlib.offset_mem [offset_mem_default]
-Compiling module xil_defaultlib.adder(width=12)
-Compiling module xil_defaultlib.wave_counter(addr_size=12,reset_...
-Compiling module xil_defaultlib.wave_counter_block_3
-Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
-Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
-Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
-Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
-Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
-Compiling architecture sine_wave_mem_arch of entity xil_defaultlib.sine_wave_mem [sine_wave_mem_default]
-Compiling module xil_defaultlib.register(width=8)
-Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
-Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
-Compiling architecture triangle_wave_mem_arch of entity xil_defaultlib.triangle_wave_mem [triangle_wave_mem_default]
-Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
-Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
-Compiling architecture square_wave_mem_arch of entity xil_defaultlib.square_wave_mem [square_wave_mem_default]
-Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
-Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
-Compiling architecture saw_wave_mem_arch of entity xil_defaultlib.saw_wave_mem [saw_wave_mem_default]
-Compiling module xil_defaultlib.mux4(width=8)
-Compiling module xil_defaultlib.combiner_block_3
-Compiling module xil_defaultlib.note_decoder_full
-Compiling module xil_defaultlib.note_decoder_full_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot note_decoder_full_tb_behav
+ERROR: [VRFC 10-1374] size mismatch in mixed language port association, vhdl port dina [/home/kristbp2/cs296-33fa18-secret/src/main.v:65]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

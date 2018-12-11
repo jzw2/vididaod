@@ -1,0 +1,4 @@
+Language File-Name                     IP                  Library         File-Path                                                                              
+Verilog, note_decoder_clock_clk_wiz.v, note_decoder_clock, xil_defaultlib, ../../../../music_box.srcs/sources_1/ip/note_decoder_clock/note_decoder_clock_clk_wiz.v
+Verilog, note_decoder_clock.v,         note_decoder_clock, xil_defaultlib, ../../../../music_box.srcs/sources_1/ip/note_decoder_clock/note_decoder_clock.v        
+Verilog, glbl.v,                       *,                  xil_defaultlib, glbl.v                                                                                 

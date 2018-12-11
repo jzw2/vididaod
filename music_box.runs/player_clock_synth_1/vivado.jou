@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Dec 10 17:09:04 2018
+# Process ID: 27215
+# Current directory: /home/kristbp2/cs296-33fa18-secret/music_box.runs/player_clock_synth_1
+# Command line: vivado -log player_clock.vds -mode batch -messageDb vivado.pb -notrace -source player_clock.tcl
+# Log file: /home/kristbp2/cs296-33fa18-secret/music_box.runs/player_clock_synth_1/player_clock.vds
+# Journal file: /home/kristbp2/cs296-33fa18-secret/music_box.runs/player_clock_synth_1/vivado.jou
+#-----------------------------------------------------------
+source player_clock.tcl -notrace

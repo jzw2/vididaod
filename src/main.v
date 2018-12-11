@@ -24,12 +24,9 @@
 
 module main(note, key, b1, b2, b3, b4, b5, sw1, clk, reset);
 
-	parameter
-		word_size = 69;
+	output [26:0] note; //the note currently being read by the reader
 
-	output [word_size-1:0] note; //the note currently being read by the reader
-
-	input [word_size-1:0] key; //the note being played by the user; to be recorded
+	input [26:0] key; //the note being played by the user; to be recorded
 	
 	input b1;
 	input b2;
@@ -41,29 +38,32 @@ module main(note, key, b1, b2, b3, b4, b5, sw1, clk, reset);
 	input clk;
 	input reset;
 	
-	wire [2:0] mux_ctrl;
-	wire [LEN_LOG_2-1:0] mux_out;
+	wire [2:0] mux_ctrl_out;
+	wire [14:0] addr_mux_out;
 		
-	wire greater_than, equal_to;
-	wire [`LEN_LOG_2:0] PC;
+	wire [14:0] PC;
+	wire [14:0] next_addr;
 	
-	wire [7:0] current_note; // our current not
-	wire write_enable = sw1 & greater_than;
+	//wire [26:0] note; // our current not
+	wire write_enable = sw1 & (PC > addr5);
 	
-	wire [word_size-1:0] addr1;
-	wire [word_size-1:0] addr2;
-	wire [word_size-1:0] addr3;
-	wire [word_size-1:0] addr4;
-	wire [word_size-1:0] addr5;	
+	wire [14:0] addr1 = 0;
+	wire [14:0] addr2 = 0;
+	wire [14:0] addr3 = 0;
+	wire [14:0] addr4 = 0;
+	wire [14:0] addr5 = 0;	
 
-	mux_control mux_ctrl({{b5}, {b4}, {b3}, {b2}, {b1}}, sw1, clk, reset, mux_ctrl);
-	mux8 #(`LEN_LOG_2) mux(addr1, addr2, addr3, addr4, addr5, next_add, mux_ctrl, mux_out);
+	mux_control mux_ctrl_mod({{b5}, {b4}, {b3}, {b2}, {b1}}, sw1, clk, reset, mux_ctrl_out);
+	mux8 #(15) addr_mux(addr1, addr2, addr3, addr4, addr5, 15'b0, 15'b0, next_addr, mux_ctrl_out, addr_mux_out);
 	
-	register #(`LEN_LOG_2) PC_Reg(PC, mux_out, clk, 1'b1, reset);
+	wire player_clock_out1, player_clock_out2;
+	player_clock pclk(clk, player_clock_out1);
+	clock_divider pclk2(player_clock_out1, 625000, player_clock_out2);
+	
+	register #(15, 0) PC_Reg(PC, addr_mux_out, player_clock_out2, 1'b1, reset);
+    
+	main_mem memory(clk, 1'b1, write_enable, PC, key, note);
 
-	main_memory #(word_size, `LEN, `LEN_LOG_2) memory(note, PC, key, write_enable, clk, reset); 
+	assign next_addr = PC + 15'b1;
 
-	adder #(`LEN_LOG_2) addr_adder(1, mux_out, next_add);
-
-	comparator writable_comp(PC, addr5, greater_than, equal_to);
 endmodule
