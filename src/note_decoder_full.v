@@ -8,9 +8,9 @@ module octave_block_3(input wire clk, input wire [26:0] notes, output wire [11:0
 	assign enables[1] = ~(notes[15:9] == 0);
 	assign enables[2] = ~(notes[24:18] == 0);
 
-	clock_divider div1(clk, {12'b0, {7-octaves[2:0]}}, clocks[0]);
-	clock_divider div2(clk, {12'b0, {7-octaves[5:3]}}, clocks[1]);
-	clock_divider div3(clk, {12'b0, {7-octaves[8:6]}}, clocks[2]);
+	clock_divider div1(clk, {12'b0, {3'd7-octaves[2:0]}}, clocks[0]);
+	clock_divider div2(clk, {12'b0, {3'd7-octaves[5:3]}}, clocks[1]);
+	clock_divider div3(clk, {12'b0, {3'd7-octaves[8:6]}}, clocks[2]);
 endmodule
 
 module wave_counter_block_3(input wire [35:0] beg_addrs, input wire [35:0] lengths, input wire [2:0] clocks, input wire [2:0] enables, output wire [35:0] note_addrs);
@@ -54,7 +54,7 @@ module note_decoder_full(input wire clk, input wire [26:0] notes, output wire [7
 	wire [1:0] lsc;
 	mux_counter lengths_mux_counter(clk, lsc);
 	wire [3:0] length_cur;
-	mux4 #(12) lengths_mux(lengths_offsets[3:0], lengths_offsets[7:4], lengths_offsets[11:8], , lsc, length_cur);	
+	mux4 #(4) lengths_mux(lengths_offsets[3:0], lengths_offsets[7:4], lengths_offsets[11:8], , lsc, length_cur);	
 	wire [35:0] lengths;
 	wire [11:0] length;
 	length_mem lengths_mem(length_cur, length);
@@ -66,7 +66,7 @@ module note_decoder_full(input wire clk, input wire [26:0] notes, output wire [7
 	wire [1:0] osc;
 	mux_counter offsets_mux_counter(clk, osc);
 	wire [3:0] offset_cur;
-	mux4 #(12) offsets_mux(lengths_offsets[3:0], lengths_offsets[7:4], lengths_offsets[11:8], , osc, offset_cur);	
+	mux4 #(4) offsets_mux(lengths_offsets[3:0], lengths_offsets[7:4], lengths_offsets[11:8], , osc, offset_cur);	
 	wire [35:0] offsets;
 	wire [11:0] offset;
 	offset_mem offsets_mem(offset_cur, offset);

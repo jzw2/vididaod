@@ -1,0 +1,4 @@
+Language File-Name               IP            Library         File-Path                                                                  
+Verilog, player_clock_clk_wiz.v, player_clock, xil_defaultlib, ../../../../music_box.srcs/sources_1/ip/player_clock/player_clock_clk_wiz.v
+Verilog, player_clock.v,         player_clock, xil_defaultlib, ../../../../music_box.srcs/sources_1/ip/player_clock/player_clock.v        
+Verilog, glbl.v,                 *,            xil_defaultlib, glbl.v                                                                     

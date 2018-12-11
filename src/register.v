@@ -13,17 +13,15 @@ module register(q, d, clk, enable, reset);
             reset_value = 0;
 
    output [(width-1):0] q;
-   reg    [(width-1):0] q;
+   reg    [(width-1):0] q = 0;
    input  [(width-1):0] d;
    input                clk, enable, reset;
 
    always@(posedge clk)
-     if (enable == 1'b1)
+     if (reset == 1'b1)
+        q <= reset_value;
+     else if (enable == 1'b1)
        q <= d;
-
-     always @(reset)
-       if (reset == 1'b1)
-         q <= reset_value;
 
 endmodule // register
 

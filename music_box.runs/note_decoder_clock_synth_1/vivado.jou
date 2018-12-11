@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Dec 10 16:58:35 2018
+# Process ID: 24801
+# Current directory: /home/kristbp2/cs296-33fa18-secret/music_box.runs/note_decoder_clock_synth_1
+# Command line: vivado -log note_decoder_clock.vds -mode batch -messageDb vivado.pb -notrace -source note_decoder_clock.tcl
+# Log file: /home/kristbp2/cs296-33fa18-secret/music_box.runs/note_decoder_clock_synth_1/note_decoder_clock.vds
+# Journal file: /home/kristbp2/cs296-33fa18-secret/music_box.runs/note_decoder_clock_synth_1/vivado.jou
+#-----------------------------------------------------------
+source note_decoder_clock.tcl -notrace

@@ -1,4 +1,4 @@
-module clock_divider(input clk_in, input [15:0] div_amt, output clk_out);
+module clock_divider(input clk_in, input [31:0] div_amt, output clk_out);
 	reg [31:0] counter = 1;
 	reg temp_clk = 0;
 	always @ (posedge(clk_in))

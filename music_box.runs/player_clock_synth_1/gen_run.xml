@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="player_clock_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1544483343">
+  <File Type="RDS-PROPCONSTRS" Name="player_clock_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="player_clock.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/player_clock_synth_1/player_clock_synth_1.psg"/>
+  <File Type="RDS-RDS" Name="player_clock.vds"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/player_clock_synth_1/sources.xml"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="player_clock_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="player_clock_timing_summary_synth.pb"/>
+  <File Type="RDS-DCP" Name="player_clock.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="player_clock_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="player_clock_utilization_synth.rpt"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/player_clock_synth_1/constrs_in.xml"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/player_clock">
+    <File Path="$PSRCDIR/sources_1/ip/player_clock/player_clock.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="player_clock"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/player_clock">
+    <File Path="$PSRCDIR/sources_1/ip/player_clock/player_clock.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="player_clock"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

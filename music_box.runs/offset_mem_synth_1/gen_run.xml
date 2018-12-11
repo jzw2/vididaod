@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="offset_mem_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1544465144">
-  <File Type="VDS-TIMING-PB" Name="offset_mem_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="offset_mem_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="offset_mem.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="offset_mem_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="offset_mem_utilization_synth.rpt"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/offset_mem_synth_1/constrs_in.xml"/>
-  <File Type="RUN-SRCS" Name="$PDATADIR/runs/offset_mem_synth_1/sources.xml"/>
-  <File Type="RDS-RDS" Name="offset_mem.vds"/>
-  <File Type="RUN-STRAT" Name="$PDATADIR/runs/offset_mem_synth_1/offset_mem_synth_1.psg"/>
+  <File Type="RDS-UTIL" Name="offset_mem_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="offset_mem_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="offset_mem.dcp"/>
+  <File Type="VDS-TIMING-PB" Name="offset_mem_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="offset_mem.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="offset_mem_drc_synth.rpt"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/offset_mem_synth_1/offset_mem_synth_1.psg"/>
+  <File Type="RDS-RDS" Name="offset_mem.vds"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/offset_mem_synth_1/sources.xml"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="offset_mem_timing_summary_synth.rpt"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/offset_mem">
     <File Path="$PSRCDIR/sources_1/ip/offset_mem/offset_mem.xci">
       <FileInfo>
@@ -38,9 +38,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

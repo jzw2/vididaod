@@ -16,6 +16,7 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
 read_ip /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/length_mem/length_mem.xci
+set_property used_in_implementation false [get_files -all /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/length_mem/length_mem.dcp]
 set_property is_locked true [get_files /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/length_mem/length_mem.xci]
 
 read_xdc dont_touch.xdc
