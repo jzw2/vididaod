@@ -1,6 +1,11 @@
 from mido import MidiFile
 
-mid = MidiFile('spirituss.mid')
+import sys
+
+inputfile = sys.argv[1]
+outputfile = sys.argv[2]
+
+mid = MidiFile(inputfile)
 
 #for i, track in enumerate(mid.tracks):
 #    print('Track {}: {}'.format(i, track.name))
@@ -9,7 +14,7 @@ mid = MidiFile('spirituss.mid')
 
 converted_notes = []
 
-SpeedUpFactor = 1
+SpeedUpFactor = 16
 
 # 0 sin
 # 1 triangel
@@ -19,7 +24,7 @@ Sin = 0
 Triangle = 1
 Square = 2
 Saw = 3
-channel_to_instr = {0 : Square, 1 : Saw} # fill this in later
+channel_to_instr = {0 : Square, 1 : Saw, 3 : Triangle, 2 : Saw, 4 : Triangle } # fill this in later
 
 class Tick: #at each tick, we encode what is happening 
 
@@ -40,9 +45,18 @@ class Tick: #at each tick, we encode what is happening
     return '{:x}'.format(int(ret, 2)) 
 
 
-NumTicks = 5
-for msg in mid.tracks[0]: # please work 2
-  NumTicks += msg.time / SpeedUpFactor
+NumTicks = SpeedUpFactor
+
+topSpeed = 0
+
+for track in mid.tracks: 
+  for msg in track: # please work 2
+    NumTicks += msg.time / SpeedUpFactor
+  if NumTicks > topSpeed:
+    topSpeed = NumTicks
+    NumTicks = 0
+
+NumTicks = topSpeed
 
 
 
@@ -86,7 +100,7 @@ print(ticks[420].notes)
 
 
 converted_notes = [tick.to_encoding() for tick in ticks]
-f = open("song3.coe", "w")
+f = open(outputfile, "w")
 converted_str = "memory_initialization_radix=16;\nmemory_initialization_vector=\n"
 
 
