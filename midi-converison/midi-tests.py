@@ -1,6 +1,6 @@
 from mido import MidiFile
 
-mid = MidiFile('OnceUponAMIDI.mid')
+mid = MidiFile('spirituss.mid')
 
 #for i, track in enumerate(mid.tracks):
 #    print('Track {}: {}'.format(i, track.name))
@@ -40,8 +40,8 @@ class Tick: #at each tick, we encode what is happening
     return '{:x}'.format(int(ret, 2)) 
 
 
-NumTicks = 0
-for msg in mid.tracks[2]: # please work 2
+NumTicks = 5
+for msg in mid.tracks[0]: # please work 2
   NumTicks += msg.time / SpeedUpFactor
 
 
@@ -52,20 +52,25 @@ for track in mid.tracks:
   current_tick_index = 0
   enabled_notes = set()
   for msg in track:
-    if msg.type == 'note_on' and msg.channel in channel_to_instr: # need to add to enabled notes
-      enabled_notes.add((msg.note, msg.channel)) 
-      print("turned on", msg.note)
-    elif msg.type == 'note_off' and msg.channel in channel_to_instr: # need to add to enabled notes # remove from notes
-        enabled_notes.remove((msg.note, msg.channel))
-        print("turned off", msg.note)
-    else:
+    print msg
+    if msg.type != 'note_on' and msg.type != 'note_off':
       continue
+    
+    if msg.channel not in channel_to_instr : # maybe change ?
+      continue 
 
-    print(len(enabled_notes))
+    if msg.type == 'note_on' : # need to add to enabled notes
+      if msg.velocity == 0: 
+        enabled_notes.remove((msg.note, msg.channel))
+      else:
+        enabled_notes.add((msg.note, msg.channel)) 
+    elif msg.type == 'note_off' : # need to add to enabled notes # remove from notes
+        enabled_notes.remove((msg.note, msg.channel))
+
 
     for i in range(msg.time / SpeedUpFactor):
-      if current_tick_index >= len(ticks): #HACK 
-        ticks += [Tick() for i in range(current_tick_index)] # TODO FIX THIS
+      #if current_tick_index >= len(ticks): #HACK 
+      #  ticks += [Tick() for i in range(current_tick_index)] # TODO FIX THIS
       # print(len(ticks), current_tick_index)
       ticks[current_tick_index].notes |= enabled_notes
       #print("track: ", track)
@@ -81,11 +86,11 @@ print(ticks[420].notes)
 
 
 converted_notes = [tick.to_encoding() for tick in ticks]
-f = open("song1.coe", "w")
+f = open("song3.coe", "w")
 converted_str = "memory_initialization_radix=16;\nmemory_initialization_vector=\n"
 
 
-print(converted_notes)
+print(len(converted_notes))
 
 converted_str += ",".join(converted_notes) + ";"
 f.write(converted_str)
