@@ -14,7 +14,6 @@ mid = MidiFile(inputfile)
 
 converted_notes = []
 
-SpeedUpFactor = 32
 
 # 0 sin
 # 1 triangel
@@ -28,8 +27,8 @@ channel_to_instr = {0 : Square, 1 : Saw, 3 : Triangle }#, 2 : Saw, 4 : Triangle 
 
 class Tick: #at each tick, we encode what is happening 
 
-  def __init__(self, notes = set()):
-    self.notes = set()
+  def __init__(self):
+    self.notes = []
   def to_encoding(self):
     ret = ""
     #print(self.notes)
@@ -45,18 +44,30 @@ class Tick: #at each tick, we encode what is happening
     return '{:x}'.format(int(ret, 2)) 
 
 
-NumTicks = SpeedUpFactor
+NumTicks = 1
 
 topSpeed = 0
 
+# Find the maximum amount of ticks in a track, because apparrently, they have idfferent lengths??
+
+
+track_lengths = []
+song_tempo = 0  #micro seconds per beat
 for track in mid.tracks: 
-  for msg in track: # please work 2
-    NumTicks += msg.time / SpeedUpFactor
+  for msg in track: 
+    NumTicks += msg.time 
+    if msg.type == 'set_tempo':
+      song_tempo = msg.tempo
+    
+  track_lengths.append(NumTicks)
   if NumTicks > topSpeed:
     topSpeed = NumTicks
-    NumTicks = 0
+  NumTicks = 0
 
+print(track_lengths)
 NumTicks = topSpeed
+ticks_per_beat = mid.ticks_per_beat
+ticks_per_32nd_second = ticks_per_beat * 1000000 / (song_tempo * 32)
 
 
 
@@ -64,49 +75,35 @@ ticks = [Tick() for x in range(NumTicks)]
 
 for track in mid.tracks:
   current_tick_index = 0
-  enabled_notes = set()
+  enabled_notes = []
   for msg in track:
-    print msg
-    if msg.type != 'note_on' and msg.type != 'note_off':
-      continue
-    
-    if msg.channel not in channel_to_instr : # maybe change ?
-      continue 
-
+    print msg 
     if msg.type == 'note_on' : # need to add to enabled notes
       if msg.velocity == 0: 
         enabled_notes.remove((msg.note, msg.channel))
       else:
-        enabled_notes.add((msg.note, msg.channel)) 
+        enabled_notes.append((msg.note, msg.channel)) 
     elif msg.type == 'note_off' : # need to add to enabled notes # remove from notes
         enabled_notes.remove((msg.note, msg.channel))
 
 
-    for i in range(msg.time / SpeedUpFactor):
-      #if current_tick_index >= len(ticks): #HACK 
-      #  ticks += [Tick() for i in range(current_tick_index)] # TODO FIX THIS
-      # print(len(ticks), current_tick_index)
-      ticks[current_tick_index].notes |= enabled_notes
-      #print("track: ", track)
+    for i in range(msg.time):
+      ticks[current_tick_index].notes += enabled_notes
       current_tick_index += 1
-    #:w
-print(ticks[20].notes)
-enabled_notes = set()
-enabled_notes.add((12, 69))
-ticks[20].notes |= enabled_notes
-print(ticks[20].notes)
-print(ticks[69].notes)
-print(ticks[420].notes)
 
 
+
+#print([tick.notes for tick in ticks])
 converted_notes = [tick.to_encoding() for tick in ticks]
+
+correct_time_notes = [converted_notes[int(round(i * ticks_per_32nd_second))] for i in range(int(NumTicks / ticks_per_32nd_second))]
+print (len(correct_time_notes) * float(27) / 1800000 * 100)
 f = open(outputfile, "w")
 converted_str = "memory_initialization_radix=16;\nmemory_initialization_vector=\n"
 
 
-print(len(converted_notes))
 
-converted_str += ",".join(converted_notes) + ";"
+converted_str += ",".join(correct_time_notes) + ";"
 f.write(converted_str)
 f.close 
 
