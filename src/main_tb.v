@@ -1,6 +1,6 @@
 module main_tb;
    reg clk = 0;
-   always #5 clk = !clk;
+   always #1 clk = !clk;
 
    reg [26:0] key = 27'b0;
    reg b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, sw1 = 0, reset = 1;

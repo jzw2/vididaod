@@ -1,16 +1,16 @@
 module octave_block_3(input wire clk, input wire [26:0] notes, output wire [11:0] lengths_offsets, output wire [2:0] enables, output wire [2:0] clocks);
 	wire [8:0] octaves;
-	octave_decoder dec1(notes[6:0], octaves[2:0], lengths_offsets[3:0]);
-	octave_decoder dec2(notes[15:9], octaves[5:3], lengths_offsets[7:4]);
-	octave_decoder dec3(notes[24:18], octaves[8:6], lengths_offsets[11:8]);
+	octave_decoder dec1((notes[6:0] - 7'b1), octaves[2:0], lengths_offsets[3:0]);
+	octave_decoder dec2((notes[15:9] - 7'b1), octaves[5:3], lengths_offsets[7:4]);
+	octave_decoder dec3((notes[24:18] - 7'b1), octaves[8:6], lengths_offsets[11:8]);
 	
 	assign enables[0] = ~(notes[6:0] == 0);
 	assign enables[1] = ~(notes[15:9] == 0);
 	assign enables[2] = ~(notes[24:18] == 0);
 
-	clock_divider div1(clk, {12'b0, {3'd7-octaves[2:0]}}, clocks[0]);
-	clock_divider div2(clk, {12'b0, {3'd7-octaves[5:3]}}, clocks[1]);
-	clock_divider div3(clk, {12'b0, {3'd7-octaves[8:6]}}, clocks[2]);
+	clock_divider div1(clk, 16'b1 << (3'd7-octaves[2:0]), clocks[0]);
+	clock_divider div2(clk, 16'b1 << (3'd7-octaves[5:3]), clocks[1]);
+	clock_divider div3(clk, 16'b1 << (3'd7-octaves[8:6]), clocks[2]);
 endmodule
 
 module wave_counter_block_3(input wire [35:0] beg_addrs, input wire [35:0] lengths, input wire [2:0] clocks, input wire [2:0] enables, output wire [35:0] note_addrs);
@@ -21,10 +21,11 @@ endmodule
 
 module combiner_block_3(input wire [23:0] sine_waves, input wire [23:0] triangle_waves, input wire [23:0] square_waves, input wire [23:0] saw_waves, wire [5:0] crtl_seq, input wire [2:0] enables, output wire [7:0] out);
 	wire [23:0] to_add;
-	mux4 #(8) note1(sine_waves[7:0], triangle_waves[7:0], square_waves[7:0], saw_waves[7:0], crtl_seq[1:0], to_add[7:0]);
+	mux4 #(8) note1(sine_waves[7:0], triangle_waves[7:0], square_waves[7:0], saw_waves[7:0], crtl_seq[1:0], to_add[15:0]);
 	mux4 #(8) note2(sine_waves[15:8], triangle_waves[15:8], square_waves[15:8], saw_waves[15:8], crtl_seq[3:2], to_add[15:8]);
 	mux4 #(8) note3(sine_waves[23:16], triangle_waves[23:16], square_waves[23:16], saw_waves[23:16], crtl_seq[5:4], to_add[23:16]);
-	assign out = (to_add[7:0] & {8{enables[0]}}) + (to_add[15:8] & {8{enables[1]}}) + (to_add[23:16] & {8{enables[2]}});
+	wire [9:0] div_3 = ((to_add[7:0] & {8{enables[0]}}) + (to_add[15:8] & {8{enables[1]}}) + (to_add[23:16] & {8{enables[2]}}));
+	assign out = div_3/3;
 endmodule
 
 module mux_counter(input wire clk, output wire [1:0] out);

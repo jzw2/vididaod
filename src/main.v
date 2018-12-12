@@ -54,11 +54,11 @@ module main(note, key, b1, b2, b3, b4, b5, sw1, clk, reset);
 	wire [14:0] addr5 = 0;	
 
 	mux_control mux_ctrl_mod({{b5}, {b4}, {b3}, {b2}, {b1}}, sw1, clk, reset, mux_ctrl_out);
-	mux8 #(15) addr_mux(addr1, addr2, addr3, addr4, addr5, 15'b0, 15'b0, next_addr, mux_ctrl_out, addr_mux_out);
+	mux8 #(15) addr_mux(next_addr, addr1, addr2, addr3, addr4, addr5, 15'b0, 15'b0, mux_ctrl_out, addr_mux_out);
 	
 	wire player_clock_out1, player_clock_out2;
 	player_clock pclk(clk, player_clock_out1);
-	clock_divider pclk2(player_clock_out1, 625000, player_clock_out2);
+	clock_divider pclk2(player_clock_out1, 78125, player_clock_out2);
 	
 	register #(15, 0) PC_Reg(PC, addr_mux_out, player_clock_out2, 1'b1, reset);
     
