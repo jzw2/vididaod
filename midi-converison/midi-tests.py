@@ -39,7 +39,7 @@ class Tick: #at each tick, we encode what is happening
       if (index >= 3): #we can only play three notes
         break
       instrument = channel_to_instr[channel]
-      ret += "{:02b}{:07b}".format(instrument,val)
+      ret += "{:02b}{:07b}".format(instrument,val - 20) # 20 is for the midi transpositon to piano
 
     return '{:x}'.format(int(ret, 2)) 
 
@@ -78,6 +78,11 @@ for track in mid.tracks:
   enabled_notes = []
   for msg in track:
     print msg 
+    for i in range(msg.time):
+      ticks[current_tick_index].notes += enabled_notes
+      current_tick_index += 1
+
+
     if msg.type == 'note_on' : # need to add to enabled notes
       if msg.velocity == 0: 
         enabled_notes.remove((msg.note, msg.channel))
@@ -87,16 +92,14 @@ for track in mid.tracks:
         enabled_notes.remove((msg.note, msg.channel))
 
 
-    for i in range(msg.time):
-      ticks[current_tick_index].notes += enabled_notes
-      current_tick_index += 1
 
 
 
-#print([tick.notes for tick in ticks])
+print([tick.notes for tick in ticks])
 converted_notes = [tick.to_encoding() for tick in ticks]
 
 correct_time_notes = [converted_notes[int(round(i * ticks_per_32nd_second))] for i in range(int(NumTicks / ticks_per_32nd_second))]
+print(len(correct_time_notes))
 print (len(correct_time_notes) * float(27) / 1800000 * 100)
 f = open(outputfile, "w")
 converted_str = "memory_initialization_radix=16;\nmemory_initialization_vector=\n"
