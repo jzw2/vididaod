@@ -1,12 +1,19 @@
-module octave_block_3(input wire clk, input wire [26:0] notes, output wire [11:0] lengths_offsets, output wire [2:0] enables, output wire [2:0] clocks);
-	wire [8:0] octaves;
+module octave_block_3(input wire clk, input wire [53:0] notes, output wire [23:0] lengths_offsets, output wire [5:0] enables, output wire [5:0] clocks);
+	wire [17:0] octaves;
 	octave_decoder dec1((notes[6:0] - 7'b1), octaves[2:0], lengths_offsets[3:0]);
 	octave_decoder dec2((notes[15:9] - 7'b1), octaves[5:3], lengths_offsets[7:4]);
 	octave_decoder dec3((notes[24:18] - 7'b1), octaves[8:6], lengths_offsets[11:8]);
-	
+	octave_decoder dec1((notes[33:27] - 7'b1), octaves[11:9], lengths_offsets[15:12]);
+	octave_decoder dec2((notes[42:36] - 7'b1), octaves[14:12], lengths_offsets[19:16]);
+	octave_decoder dec3((notes[51:45] - 7'b1), octaves[17:15], lengths_offsets[23:20]);	
+
 	assign enables[0] = ~(notes[6:0] == 0);
 	assign enables[1] = ~(notes[15:9] == 0);
 	assign enables[2] = ~(notes[24:18] == 0);
+	assign enables[3] = ~(notes[33:27] == 0);
+	assign enables[4] = ~(notes[42:36] == 0);
+	assign enables[5] = ~(notes[51:45] == 0);
+
 
 	clock_divider div1(clk, 16'b1 << (3'd7-octaves[2:0]), clocks[0]);
 	clock_divider div2(clk, 16'b1 << (3'd7-octaves[5:3]), clocks[1]);
