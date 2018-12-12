@@ -25,7 +25,9 @@ module combiner_block_3(input wire [23:0] sine_waves, input wire [23:0] triangle
 	mux4 #(8) note2(sine_waves[15:8], triangle_waves[15:8], square_waves[15:8], saw_waves[15:8], crtl_seq[3:2], to_add[15:8]);
 	mux4 #(8) note3(sine_waves[23:16], triangle_waves[23:16], square_waves[23:16], saw_waves[23:16], crtl_seq[5:4], to_add[23:16]);
 	wire [9:0] div_3 = ((to_add[7:0] & {8{enables[0]}}) + (to_add[15:8] & {8{enables[1]}}) + (to_add[23:16] & {8{enables[2]}}));
-	assign out = div_3/3;
+	wire [9:0] div_2 = div_3;
+        wire div_1_check = (enables == 3'b001) | (enables == 3'b010) | (enables == 3'b100);
+        assign out = ((div_3/3) & (enables == 3'b111)) | ((div_2 >> 1) & (~(enables == 3'b111) & div_1_check)) | (div_3 & div_1_check);
 endmodule
 
 module mux_counter(input wire clk, output wire [1:0] out);
