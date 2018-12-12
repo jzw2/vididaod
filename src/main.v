@@ -58,11 +58,11 @@ module main(note, key, b1, b2, b3, b4, b5, sw1, clk, reset);
 	
 	wire player_clock_out1, player_clock_out2;
 	player_clock pclk(clk, player_clock_out1);
-	clock_divider pclk2(player_clock_out1, 78125, player_clock_out2);
+	clock_divider pclk2(player_clock_out1, 0, player_clock_out2);
 	
 	register #(15, 0) PC_Reg(PC, addr_mux_out, player_clock_out2, 1'b1, reset);
     
-	main_mem memory(clk, 1'b1, write_enable, PC, key, note);
+	main_mem memory(clk, 1'b1, write_enable, PC[11:0], key, note);
 
 	assign next_addr = PC + 15'b1;
 

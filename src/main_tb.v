@@ -11,17 +11,18 @@ module main_tb;
    initial begin
       $dumpfile("main.vcd");
       $dumpvars(0, main_tb);
+      $display (" 1  &  10 = %d", 1'b1 & 10);
       #10
       reset = 1;
-      #10000
+      #1000
       reset = 0;
       #10 
       b1 = 0;
       #1000 
       b1 = 1;
-      #100000
+      #1000
       b1 = 0;
-      #100000
+      #1000
         
       $finish;
    end
