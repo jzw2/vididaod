@@ -68,5 +68,5 @@ module mux8(in0, in1, in2, in3, in4, in5, in6, in7, crtl, out);
 	wire [width-1:0] o1, o2;
 	mux4 #(width) m4_1(in0, in1, in2, in3, crtl[1:0], o1);
 	mux4 #(width) m4_2(in4, in5, in6, in7, crtl[1:0], o2);	
-	mux2 #(width) m2_3(o1, o2, crtl[1], out);
+	mux2 #(width) m2_3(o1, o2, crtl[2], out);
 endmodule
