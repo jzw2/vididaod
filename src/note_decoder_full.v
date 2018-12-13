@@ -8,9 +8,9 @@ module octave_block_3(input wire clk, input wire [26:0] notes, output wire [11:0
 	assign enables[1] = ~(notes[15:9] == 0);
 	assign enables[2] = ~(notes[24:18] == 0);
 
-	clock_divider div1(clk, 16'b1 << (3'd7-octaves[2:0]), clocks[0]);
-	clock_divider div2(clk, 16'b1 << (3'd7-octaves[5:3]), clocks[1]);
-	clock_divider div3(clk, 16'b1 << (3'd7-octaves[8:6]), clocks[2]);
+	clock_divider div1(clk, 16'b1 << (3'd7-octaves[2:0] - 1), clocks[0]);
+	clock_divider div2(clk, 16'b1 << (3'd7-octaves[5:3] - 1), clocks[1]);
+	clock_divider div3(clk, 16'b1 << (3'd7-octaves[8:6] - 1), clocks[2]);
 endmodule
 
 module wave_counter_block_3(input wire [35:0] beg_addrs, input wire [35:0] lengths, input wire [2:0] clocks, input wire [2:0] enables, output wire [35:0] note_addrs);

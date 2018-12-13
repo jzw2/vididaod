@@ -15,9 +15,9 @@ module note_decoder_full_tb;
       
       #10
       enable = 1;
-      note = 27'h35121;
+      note = 27'd88;
       #10000
-      note = 27'h671511a;
+      note = 27'd1;
       #10000
       $finish;
    end

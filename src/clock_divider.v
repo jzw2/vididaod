@@ -11,5 +11,6 @@ module clock_divider(input clk_in, input [31:0] div_amt, output clk_out);
 		else
 			counter <= counter + 1;
 	end
-	assign clk_out = temp_clk;
+	wire def = ~(div_amt == 0);
+	assign clk_out = (temp_clk & def) | (clk_in & ~def);
 endmodule
