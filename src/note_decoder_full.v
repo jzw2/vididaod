@@ -45,9 +45,12 @@ module mux_counter(input wire clk, output wire [1:0] out);
 endmodule
 
 module note_decoder_full(input wire clk, input wire [26:0] notes, output wire [7:0] out);	
-	wire new_clk;
+	wire reg_clk, new_clk, all_clk;
 	note_decoder_clock ndc(clk, new_clk);
-	clock_divider main_div(new_clk, 32'd3, all_clk);
+	reg_clk_divider reg_div(clk, reg_clk);
+	//clock_divider new_div(reg_clk, 32'd1, new_clk);
+	clock_divider main_div(reg_clk, 32'd6, all_clk);
+	//clock_divider reg_div(clk, 32'd4, reg_clk);
 	wire [11:0] lengths_offsets;
 	wire [2:0] enables;
 	wire [2:0] clocks;
@@ -62,9 +65,9 @@ module note_decoder_full(input wire clk, input wire [26:0] notes, output wire [7
 	wire [35:0] lengths;
 	wire [11:0] length;
 	length_mem lengths_mem(length_cur, length);
-	register #(12) lengths_reg_1(lengths[11:0], length, clk, lsc == 0, 1'b0);
-	register #(12) lengths_reg_2(lengths[23:12], length, clk, lsc == 1, 1'b0);
-	register #(12) lengths_reg_3(lengths[35:24], length, clk, lsc == 2, 1'b0);
+	register #(12) lengths_reg_1(lengths[11:0], length, reg_clk, lsc == 0, 1'b0);
+	register #(12) lengths_reg_2(lengths[23:12], length, reg_clk, lsc == 1, 1'b0);
+	register #(12) lengths_reg_3(lengths[35:24], length, reg_clk, lsc == 2, 1'b0);
 
 	//extend offsets to 3 ports
 	wire [1:0] osc;
@@ -74,9 +77,9 @@ module note_decoder_full(input wire clk, input wire [26:0] notes, output wire [7
 	wire [35:0] offsets;
 	wire [11:0] offset;
 	offset_mem offsets_mem(offset_cur, offset);
-	register #(12) offsets_reg_1(offsets[11:0], offset, clk, osc == 0, 1'b0);
-	register #(12) offsets_reg_2(offsets[23:12], offset, clk, osc == 1, 1'b0);
-	register #(12) offsets_reg_3(offsets[35:24], offset, clk, osc == 2, 1'b0);
+	register #(12) offsets_reg_1(offsets[11:0], offset, reg_clk, osc == 0, 1'b0);
+	register #(12) offsets_reg_2(offsets[23:12], offset, reg_clk, osc == 1, 1'b0);
+	register #(12) offsets_reg_3(offsets[35:24], offset, reg_clk, osc == 2, 1'b0);
 
 	wire [35:0] note_addrs;
 	wave_counter_block_3 wcb3(offsets, lengths, clocks, enables, note_addrs);
@@ -89,9 +92,9 @@ module note_decoder_full(input wire clk, input wire [26:0] notes, output wire [7
 	wire [23:0] sine_waves;
 	wire [7:0] sine_wave;
 	sine_wave_mem sine_waves_mem(clk, 1'b1, sine_wave_cur, sine_wave);
-	register #(8) sine_waves_reg_1(sine_waves[7:0], sine_wave, clk, sinsc == 0, 1'b0);
-	register #(8) sine_waves_reg_2(sine_waves[15:8], sine_wave, clk, sinsc == 1, 1'b0);
-	register #(8) sine_waves_reg_3(sine_waves[23:16], sine_wave, clk, sinsc == 2, 1'b0);
+	register #(8) sine_waves_reg_1(sine_waves[7:0], sine_wave, reg_clk, sinsc == 0, 1'b0);
+	register #(8) sine_waves_reg_2(sine_waves[15:8], sine_wave, reg_clk, sinsc == 1, 1'b0);
+	register #(8) sine_waves_reg_3(sine_waves[23:16], sine_wave, reg_clk, sinsc == 2, 1'b0);
 
 	wire [1:0] trisc;
 	mux_counter triangle_waves_mux_counter(new_clk, trisc);
@@ -100,9 +103,9 @@ module note_decoder_full(input wire clk, input wire [26:0] notes, output wire [7
 	wire [23:0] triangle_waves;
 	wire [7:0] triangle_wave;
 	triangle_wave_mem triangle_waves_mem(clk, 1'b1, triangle_wave_cur, triangle_wave);
-	register #(8) triangle_waves_reg_1(triangle_waves[7:0], triangle_wave, clk, trisc == 0, 1'b0);
-	register #(8) triangle_waves_reg_2(triangle_waves[15:8], triangle_wave, clk, trisc == 1, 1'b0);
-	register #(8) triangle_waves_reg_3(triangle_waves[23:16], triangle_wave, clk, trisc == 2, 1'b0);
+	register #(8) triangle_waves_reg_1(triangle_waves[7:0], triangle_wave, reg_clk, trisc == 0, 1'b0);
+	register #(8) triangle_waves_reg_2(triangle_waves[15:8], triangle_wave, reg_clk, trisc == 1, 1'b0);
+	register #(8) triangle_waves_reg_3(triangle_waves[23:16], triangle_wave, reg_clk, trisc == 2, 1'b0);
 
 	wire [1:0] squaresc;
 	mux_counter square_waves_mux_counter(new_clk, squaresc);
@@ -111,9 +114,9 @@ module note_decoder_full(input wire clk, input wire [26:0] notes, output wire [7
 	wire [23:0] square_waves;
 	wire [7:0] square_wave;
 	square_wave_mem square_waves_mem(clk, 1'b1, square_wave_cur, square_wave);
-	register #(8) square_waves_reg_1(square_waves[7:0], square_wave, clk, squaresc == 0, 1'b0);
-	register #(8) square_waves_reg_2(square_waves[15:8], square_wave, clk, squaresc == 1, 1'b0);
-	register #(8) square_waves_reg_3(square_waves[23:16], square_wave, clk, squaresc == 2, 1'b0);
+	register #(8) square_waves_reg_1(square_waves[7:0], square_wave, reg_clk, squaresc == 0, 1'b0);
+	register #(8) square_waves_reg_2(square_waves[15:8], square_wave, reg_clk, squaresc == 1, 1'b0);
+	register #(8) square_waves_reg_3(square_waves[23:16], square_wave, reg_clk, squaresc == 2, 1'b0);
 
 	wire [1:0] sawsc;
 	mux_counter saw_waves_mux_counter(new_clk, sawsc);
@@ -122,9 +125,9 @@ module note_decoder_full(input wire clk, input wire [26:0] notes, output wire [7
 	wire [23:0] saw_waves;
 	wire [7:0] saw_wave;
 	saw_wave_mem saw_waves_mem(clk, 1'b1, saw_wave_cur, saw_wave);
-	register #(8) saw_waves_reg_1(saw_waves[7:0], saw_wave, clk, sawsc == 0, 1'b0);
-	register #(8) saw_waves_reg_2(saw_waves[15:8], saw_wave, clk, sawsc == 1, 1'b0);
-	register #(8) saw_waves_reg_3(saw_waves[23:16], saw_wave, clk, sawsc == 2, 1'b0);
+	register #(8) saw_waves_reg_1(saw_waves[7:0], saw_wave, reg_clk, sawsc == 0, 1'b0);
+	register #(8) saw_waves_reg_2(saw_waves[15:8], saw_wave, reg_clk, sawsc == 1, 1'b0);
+	register #(8) saw_waves_reg_3(saw_waves[23:16], saw_wave, reg_clk, sawsc == 2, 1'b0);
 
 	combiner_block_3 cb3(sine_waves, triangle_waves, square_waves, saw_waves, {{notes[8:7]}, {notes[17:16]}, {notes[26:25]}}, enables, out); 
 
