@@ -237,7 +237,7 @@ BEGIN
       C_LOAD_INIT_FILE => 1,
       C_INIT_FILE_NAME => "saw_wave_mem.mif",
       C_INIT_FILE => "saw_wave_mem.mem",
-      C_USE_DEFAULT_DATA => 0,
+      C_USE_DEFAULT_DATA => 1,
       C_DEFAULT_DATA => "0",
       C_HAS_RSTA => 0,
       C_RST_PRIORITY_A => "CE",

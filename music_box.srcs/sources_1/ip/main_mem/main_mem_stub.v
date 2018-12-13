@@ -1,7 +1,7 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-// Date        : Mon Dec 10 19:10:35 2018
+// Date        : Wed Dec 12 19:46:23 2018
 // Host        : siebl-0224-38.ews.illinois.edu running 64-bit CentOS Linux release 7.6.1810 (Core)
 // Command     : write_verilog -force -mode synth_stub
 //               /home/kristbp2/cs296-33fa18-secret/music_box.srcs/sources_1/ip/main_mem/main_mem_stub.v
@@ -15,11 +15,11 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "blk_mem_gen_v8_3_1,Vivado 2015.4" *)
 module main_mem(clka, ena, wea, addra, dina, douta)
-/* synthesis syn_black_box black_box_pad_pin="clka,ena,wea[0:0],addra[14:0],dina[31:0],douta[31:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clka,ena,wea[0:0],addra[13:0],dina[26:0],douta[26:0]" */;
   input clka;
   input ena;
   input [0:0]wea;
-  input [14:0]addra;
-  input [31:0]dina;
-  output [31:0]douta;
+  input [13:0]addra;
+  input [26:0]dina;
+  output [26:0]douta;
 endmodule
