@@ -37,7 +37,7 @@ class Tick: #at each tick, we encode what is happening
       if (index >= 3): #we can only play three notes
         break
       instrument = channel_to_instr[channel]
-      ret += "{:02b}{:07b}".format(instrument,val - 20) # 20 is for the midi transpositon to piano
+      ret += "{:02b}{:07b}".format(instrument,val) # 20 is for the midi transpositon to piano
 
     return '{:x}'.format(int(ret, 2)) 
 
@@ -119,6 +119,7 @@ converted_str = "memory_initialization_radix=16;\nmemory_initialization_vector=\
 converted_str += ",".join(all_notes) + ";"
 
 print("offsets:", song_indeces)
+print(len(all_notes))
 f.write(converted_str)
 f.close 
 
