@@ -22,6 +22,20 @@
 `define LEN 65000
 `define LEN_LOG_2 16
 
+module address_fetch_counter(input wire clk, output wire [1:0] out);
+	reg [1:0] counter = 0;
+	always @ (posedge(clk))
+	begin
+ 		if (counter >= 2)
+ 		begin
+  			counter <= 0;
+ 		end
+ 		else
+ 			counter <= counter + 1;
+	end
+	assign out = counter;
+endmodule
+
 module main(note, key, b1, b2, b3, b4, b5, sw1, clk, reset);
 
 	output [26:0] note; //the note currently being read by the reader
@@ -52,7 +66,7 @@ module main(note, key, b1, b2, b3, b4, b5, sw1, clk, reset);
 	wire [14:0] addr3 = 0;
 	wire [14:0] addr4 = 0;
 	wire [14:0] addr5 = 0;	
-
+	
 	mux_control mux_ctrl_mod({{b5}, {b4}, {b3}, {b2}, {b1}}, sw1, clk, reset, mux_ctrl_out);
 	mux8 #(15) addr_mux(next_addr, addr1, addr2, addr3, addr4, addr5, 15'b0, 15'b0, mux_ctrl_out, addr_mux_out);
 	
@@ -61,8 +75,8 @@ module main(note, key, b1, b2, b3, b4, b5, sw1, clk, reset);
 	clock_divider pclk2(player_clock_out1, 78125, player_clock_out2);
 	
 	register #(15, 0) PC_Reg(PC, addr_mux_out, player_clock_out2, 1'b1, reset);
-    
-	main_mem memory(clk, 1'b1, write_enable, PC[11:0], key, note);
+	
+	main_mem memory(clk, 1'b1, write_enable, PC[13:0], key, note);
 
 	assign next_addr = PC + 15'b1;
 

@@ -40,7 +40,7 @@ module mux2(in0, in1, crtl, out);
 	input	crtl;
 	output	[width-1:0] out;
 	
-	assign out = ({(width-1){crtl}} & in1) | ({(width-1){~crtl}} & in0);
+	assign out = ({(width){crtl}} & in1) | ({(width){~crtl}} & in0);
 
 endmodule
 
