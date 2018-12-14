@@ -21,7 +21,7 @@ Sin = 0
 Triangle = 1
 Square = 2
 Saw = 3
-channel_to_instr = {0 : Square, 1 : Saw, 3 : Triangle }#, 2 : Saw, 4 : Triangle } # fill this in later
+channel_to_instr = {0 : Square, 1 : Sin, 3 : Triangle }#, 2 : Saw, 4 : Triangle } # fill this in later
 
 class Tick: #at each tick, we encode what is happening 
 
